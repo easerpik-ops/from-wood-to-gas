@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">From oil to kerosene</span>
+        <span class="only en common">Crude oil and kerosene</span>
+        <span class="only he simple">מנפט לקרוסין</span>
+        <span class="only he common">מנפט גולמי לקרוסין</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say how kerosene is different from crude oil.</span>
+        <span class="only en common">By the end of this page, explain the difference between kerosene and crude oil.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר במה קרוסין שונה מנפט גולמי.</span>
+        <span class="only he common">בסוף העמוד תוכלו להסביר במה נבדל קרוסין מנפט גולמי.</span>
+      </p>
+      <p>
+        <span class="only en simple">Coal was not the only fuel people knew long ago. They also knew kerosene and cooking gas. These burn well and give a lot of heat. Like coal, they lie deep under the ground, and they were hard to get out. Machines made that work easier.</span>
+        <span class="only en common">Coal was not the only fuel people already knew many years ago. They also knew kerosene and cooking gas, two materials that burn well and give off a great deal of heat. Like coal, they lie deep in the earth, and bringing them up was hard work. Machines made that work easier, so people could use these fuels.</span>
+        <span class="only he simple">הפחם לא היה הדלק היחיד שאנשים הכירו לפני שנים רבות. הם הכירו גם קרוסין וגז בישול. אלה בוערים היטב ונותנים הרבה חום. כמו הפחם, הם עמוק באדמה, והיה קשה להוציא אותם. המכונות הקלו על העבודה.</span>
+        <span class="only he common">לפני שנים רבות הכירו בני האדם לא רק את הפחם. הם הכירו גם קרוסין וגם גז בישול, שני דלקים שבוערים יפה ומחממים מאוד. שניהם, כמו הפחם, חבויים עמוק באדמה, והעלאתם הייתה עבודה קשה. מכונות הקלו על ההעלאה הזאת, ומאז אפשר היה להשתמש בדלקים האלה.</span>
+      </p>
+      <p>
+        <span class="only en simple">Kerosene is not found in the ground ready to burn. People make it from crude oil. Crude oil is the fuel that comes up from under the ground.</span>
+        <span class="only en common">Kerosene is not found in the ground in the form we burn. It is made from a material called crude oil, and crude oil is what is taken out of the earth.</span>
+        <span class="only he simple">את הקרוסין לא מוצאים באדמה מוכן לשימוש. מכינים אותו מנפט גולמי. נפט גולמי הוא הדלק שמוציאים מתוך האדמה.</span>
+        <span class="only he common">קרוסין אינו מחכה באדמה בצורה שבה שורפים אותו. מפיקים אותו מנפט גולמי, והנפט הגולמי הוא החומר שמעלים מן האדמה.</span>
+      </p>
+      <p>
+        <span class="only en simple">Kerosene is a clear liquid with a sharp smell. In Hebrew many people call it נפט, but its right name is kerosene. Many homes use it in heaters. Planes use it too. Long ago, people burned it in lamps and in stoves, to cook and to keep warm.</span>
+        <span class="only en common">Kerosene is a clear liquid with a sharp smell. In Hebrew it is often called נפט, yet its correct name is kerosene. Many homes still use it in heating stoves. It is also a fuel for airplanes. In the past, people burned it in lamps and in stoves for cooking and for heat.</span>
+        <span class="only he simple">קרוסין הוא נוזל שקוף עם ריח חזק. בעברית קוראים לו הרבה פעמים נפט, אבל השם הנכון הוא קרוסין. בהרבה בתים משתמשים בו בתנורי חימום. גם מטוסים משתמשים בו כדלק. פעם שרפו אותו במנורות ובתנורים, לבישול ולחימום.</span>
+        <span class="only he common">קרוסין הוא נוזל צלול וריחו חריף. בעברית רגילים לקרוא לו נפט, אבל השם המדויק הוא קרוסין. גם היום בתים רבים מחממים את החדרים בתנורי קרוסין, ומטוסים טסים על הדלק הזה. בדורות קודמים הוא דלק במנורות ובכיריים, לאור, לבישול ולחימום.</span>
+      </p>
+      <div class="word">
+        <h3>
+          <span class="only en simple">Kerosene and נפט</span>
+          <span class="only en common">A word: kerosene and נפט</span>
+          <span class="only he simple">קרוסין ונפט</span>
+          <span class="only he common">קרוסין ונפט</span>
+        </h3>
+        <p>
+          <span class="only en simple">In Hebrew, many people say נפט when they mean kerosene. Kerosene is the clear liquid. The black liquid from the ground is crude oil, נפט גולמי.</span>
+          <span class="only en common">In everyday Hebrew, נפט often means kerosene, the clear liquid burned in heaters and lamps. The black liquid from under the ground has a longer name: crude oil, נפט גולמי.</span>
+          <span class="only he simple">הרבה אומרים נפט ומתכוונים לקרוסין. קרוסין הוא הנוזל השקוף. הנוזל השחור מהאדמה הוא נפט גולמי.</span>
+          <span class="only he common">בעברית של יום-יום, נפט פירושו לרוב קרוסין, הנוזל הצלול שנשרף בתנורים ובמנורות. לנוזל השחור מתוך האדמה יש שם ארוך יותר: נפט גולמי.</span>
+        </p>
+      </div>
+      <p>
+        <span class="only en simple">Sometimes the news says oil was found somewhere in the world. That is not kerosene. It is a black, thick liquid. Its full name is crude oil. We call it crude because it is oil just as people find it in nature, before they change it. It is an oily liquid from the earth, so it is also called earth oil.</span>
+        <span class="only en common">Now and then the news reports that oil has been found somewhere in the world. Those reports do not mean kerosene. They mean a black, thick liquid whose full name is crude oil. It is called crude because it is oil as nature left it, a raw material. Crude oil is an oily liquid found inside the earth, which is why it is also called earth oil.</span>
+        <span class="only he simple">לפעמים שומעים בחדשות שמצאו נפט במקום כלשהו בעולם. לא מתכוונים לקרוסין. מתכוונים לנוזל שחור וסמיך. שמו המלא הוא נפט גולמי. קוראים לו גולמי כי זה הנפט כפי שמוצאים אותו בטבע, לפני שמשנים אותו. זה נוזל שמנוני מתוך האדמה, ולכן קוראים לו גם שמן אדמה.</span>
+        <span class="only he common">בחדשות מספרים לפעמים שגילו נפט במקום כלשהו בעולם. הכוונה אינה לקרוסין, אלא לנוזל שחור וסמיך, ושמו המלא נפט גולמי. השם גולמי אומר שהנפט עוד כפי שהטבע נתן אותו, חומר גלם לפני שמכינים ממנו דברים. מפני שהוא נוזל שמנוני מתוך האדמה, יש לו גם שם נוסף: שמן אדמה.</span>
+      </p>
+      <figure>
+        <img src="../images/kerosene.jpg" alt="A dark jar of crude oil, a pale jar of kerosene, a lit lamp, and a heater, with an airplane in the window." data-i18n-alt="keroAlt">
+        <figcaption>
+          <span class="only en simple">The dark jar is crude oil. The pale jar is kerosene. Beside them are a lamp and a heater.</span>
+          <span class="only en common">The black jar holds crude oil, and the pale jar holds kerosene. A lamp and a home heater stand beside them, and an airplane crosses the window.</span>
+          <span class="only he simple">הצנצנת הכהה היא נפט גולמי. הצנצנת הבהירה היא קרוסין. לידם מנורה ותנור.</span>
+          <span class="only he common">בצנצנת השחורה נפט גולמי, ובצנצנת הבהירה קרוסין. לידם מנורת קרוסין ותנור חימום, ומטוס חולף בחלון.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

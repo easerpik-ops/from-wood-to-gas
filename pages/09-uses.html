@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">How we use coal</span>
+        <span class="only en common">Coal as a fuel</span>
+        <span class="only he simple">למה משמש הפחם</span>
+        <span class="only he common">הפחם כחומר דלק</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, name ways people use coal.</span>
+        <span class="only en common">By the end of this page, name the main uses of coal as a fuel.</span>
+        <span class="only he simple">בסוף העמוד תוכלו למנות שימושים של הפחם.</span>
+        <span class="only he common">בסוף העמוד תוכלו למנות את השימושים העיקריים של הפחם כדלק.</span>
+      </p>
+      <p>
+        <span class="only en simple">For many years, coal was the main fuel for trains, ships, and factories.</span>
+        <span class="only en common">Until about fifty years ago, coal was the main fuel for moving trains and ships and for running factories.</span>
+        <span class="only he simple">שנים רבות היה הפחם הדלק העיקרי לרכבות, לאוניות ולבתי חרושת.</span>
+        <span class="only he common">במשך שנים רבות, עד לפני כחמישים שנה, היה הפחם הדלק העיקרי של רכבות, אוניות ובתי חרושת.</span>
+      </p>
+      <p>
+        <span class="only en simple">Coal is not found in every country. Where there is a lot of coal, people also burn it at home, to cook and to keep warm.</span>
+        <span class="only en common">Coal is not found in every part of the world. In countries that have plenty of it, people use coal for transport and industry, and also at home for heating and cooking.</span>
+        <span class="only he simple">פחם לא נמצא בכל ארץ. איפה שיש הרבה פחם, שורפים אותו גם בבית לבישול ולחימום.</span>
+        <span class="only he common">הפחם אינו נמצא בכל מקום בעולם. בארצות שיש בהן פחם בשפע משתמשים בו גם בתחבורה ובתעשייה, וגם בבית לחימום ולבישול.</span>
+      </p>
+      <p>
+        <span class="only en simple">Burning coal makes a lot of heat. Coal is also dirty. It makes smoke and soot, and it leaves a lot of ash.</span>
+        <span class="only en common">Coal gives off a great deal of heat when it burns. Its fault is that it is dirty: the fire makes smoke and soot, and a lot of ash is left behind.</span>
+        <span class="only he simple">כשפחם נשרף הוא נותן הרבה חום. אבל הוא מלכלך: יש עשן, פיח והרבה אפר.</span>
+        <span class="only he common">הפחם נותן חום רב כשהוא בוער. החיסרון הוא שהוא מלכלך. השריפה מביאה עשן ופיח, ונשאר אחריה אפר רב.</span>
+      </p>
+      <p>
+        <span class="only en simple">Our land has almost no coal under the ground. We buy the coal we need from other countries. Most of it is used in power stations, which make electricity.</span>
+        <span class="only en common">There is almost no coal deep in the ground of our country. We buy the coal we need from other countries. Its main use is in power stations, which produce electricity.</span>
+        <span class="only he simple">בארץ כמעט אין פחם עמוק באדמה. קונים את הפחם מארצות אחרות. בעיקר משתמשים בו בתחנות כוח, שעושות חשמל.</span>
+        <span class="only he common">בארצנו כמעט אין פחם במעמקי האדמה. את הפחם שדרוש לנו קונים מארצות אחרות. השימוש העיקרי בו הוא בתחנות כוח, שמפיקות חשמל.</span>
+      </p>
+      <figure>
+        <img src="../images/coal-station.jpg" alt="Huge piles of coal and a long conveyor at a power station by the sea." data-i18n-alt="pilesAlt">
+        <figcaption>
+          <span class="only en simple">Piles of coal at the power station in Ashkelon.</span>
+          <span class="only en common">Great piles of coal at the power station in Ashkelon.</span>
+          <span class="only he simple">ערימות פחם בתחנת הכוח באשקלון.</span>
+          <span class="only he common">ערימות הפחם בתחנת הכוח באשקלון.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

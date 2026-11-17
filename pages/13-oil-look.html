@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Get to know crude oil</span>
+        <span class="only en common">Get to know crude oil</span>
+        <span class="only he simple">הכירו את הנפט</span>
+        <span class="only he common">הכירו את הנפט הגולמי</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say how crude oil is different from cooking oil.</span>
+        <span class="only en common">By the end of this page, describe how crude oil differs from cooking oil.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר במה נפט גולמי שונה משמן מאכל.</span>
+        <span class="only he common">בסוף העמוד תוכלו לתאר במה נבדל נפט גולמי משמן מאכל.</span>
+      </p>
+      <p>
+        <span class="only en simple">The golden jar is cooking oil. The dark jar is crude oil. Click a jar to open its lid. Drag a dropper onto an open jar to fill it. Drag the full dropper onto the paper or a glass.</span>
+        <span class="only en common">The golden jar holds cooking oil. The dark jar holds crude oil, the same material found in the ground. Click a jar to open the lid. Drag a dropper onto an open jar and it fills with that liquid. Drag the full dropper onto the paper or onto a glass of water.</span>
+        <span class="only he simple">הצנצנת הזהובה היא שמן מאכל. הצנצנת הכהה היא נפט גולמי. הקישו על צנצנת כדי לפתוח את המכסה. גררו טפי אל צנצנת פתוחה כדי למלא אותו. גררו את הטפי המלא אל הנייר או אל כוס.</span>
+        <span class="only he common">בצנצנת הזהובה יש שמן מאכל. בצנצנת הכהה יש נפט גולמי, כפי שמוצאים אותו באדמה. הקישו על צנצנת כדי לפתוח את המכסה. גררו טפי אל צנצנת פתוחה, והוא יתמלא בנוזל שבתוכה. גררו את הטפי המלא אל הנייר או אל כוס מים.</span>
+      </p>
+      <div class="word">
+        <h3>
+          <span class="only en simple">Two different oils</span>
+          <span class="only en common">A word: two oils</span>
+          <span class="only he simple">שני שמנים שונים</span>
+          <span class="only he common">שני שמנים שונים</span>
+        </h3>
+        <p>
+          <span class="only en simple">Cooking oil is the golden liquid from the kitchen, שמן מאכל. Crude oil is the dark liquid from the ground, נפט גולמי. They are not the same oil.</span>
+          <span class="only en common">Cooking oil, שמן מאכל, is the golden liquid used in food. Crude oil, נפט גולמי, is the dark liquid found in the ground. The word oil is in both names, but they are different materials.</span>
+          <span class="only he simple">שמן מאכל הוא הנוזל הזהוב מהמטבח. נפט גולמי הוא הנוזל הכהה מהאדמה. אלה לא אותו שמן.</span>
+          <span class="only he common">שמן מאכל הוא הנוזל הזהוב שמשתמשים בו באוכל. נפט גולמי הוא הנוזל הכהה שנמצא באדמה. המילה שמן מופיעה בשני השמות, אבל אלה חומרים שונים.</span>
+        </p>
+      </div>
+      <div class="oil-game" data-step="look">
+        <div class="oil-stage">
+          <img class="oil-scene oil-scene-tray" src="../images/oil-tray-base.png" alt="A golden jar of cooking oil, a dark jar of crude oil, two droppers, white paper, two cups of water, and paper towels." data-i18n-alt="oilTrayAlt">
+          <div class="oil-stains oil-tool"></div>
+          <img class="oil-lid oil-tool" data-jar="cook" src="../images/oil-lid-cook.png" alt="">
+          <img class="oil-lid oil-tool" data-jar="crude" src="../images/oil-lid-crude.png" alt="">
+          <button type="button" class="oil-jar oil-tool" data-jar="cook" aria-pressed="false">
+            <span class="sr only en simple">The golden jar of cooking oil</span>
+            <span class="sr only en common">The golden jar of cooking oil</span>
+            <span class="sr only he simple">הצנצנת הזהובה של שמן המאכל</span>
+            <span class="sr only he common">הצנצנת הזהובה של שמן המאכל</span>
+          </button>
+          <button type="button" class="oil-jar oil-tool" data-jar="crude" aria-pressed="false">
+            <span class="sr only en simple">The dark jar of crude oil</span>
+            <span class="sr only en common">The dark jar of crude oil</span>
+            <span class="sr only he simple">הצנצנת הכהה של הנפט הגולמי</span>
+            <span class="sr only he common">הצנצנת הכהה של הנפט הגולמי</span>
+          </button>
+          <div class="oil-hit oil-tool" data-zone="cup1">
+            <span class="oil-film" data-liquid="cook"></span>
+            <span class="oil-film" data-liquid="crude"></span>
+          </div>
+          <div class="oil-hit oil-tool" data-zone="cup2">
+            <span class="oil-film" data-liquid="cook"></span>
+            <span class="oil-film" data-liquid="crude"></span>
+          </div>
+          <div class="oil-hit oil-tool" data-zone="paper"></div>
+          <button type="button" class="oil-pipette oil-tool" data-which="far" data-held="">
+            <img class="oil-body" src="../images/oil-dropper-far.png" alt="" draggable="false">
+            <img class="oil-carry" src="../images/oil-dropper-far-carry.png" alt="" draggable="false">
+            <span class="oil-fill"></span>
+            <span class="sr only en simple">A dropper</span>
+            <span class="sr only en common">A dropper</span>
+            <span class="sr only he simple">טפי</span>
+            <span class="sr only he common">טפי</span>
+          </button>
+          <button type="button" class="oil-pipette oil-tool" data-which="near" data-held="">
+            <img class="oil-body" src="../images/oil-dropper-near.png" alt="" draggable="false">
+            <img class="oil-carry" src="../images/oil-dropper-near-carry.png" alt="" draggable="false">
+            <span class="oil-fill"></span>
+            <span class="sr only en simple">A dropper</span>
+            <span class="sr only en common">A dropper</span>
+            <span class="sr only he simple">טפי</span>
+            <span class="sr only he common">טפי</span>
+          </button>
+        </div>
+      </div>
+      <div class="task">
+        <h3>
+          <span class="only en simple">The tests</span>
+          <span class="only en common">The tests</span>
+          <span class="only he simple">הבדיקות</span>
+          <span class="only he common">הבדיקות</span>
+        </h3>
+        <ol class="oil-steps">
+          <li class="oil-step is-open is-now" data-step="look">
+            <p>
+              <span class="only en simple">1. Open the dark jar. What color is the crude oil? Is the liquid thick or thin?</span>
+              <span class="only en common">1. Open the dark jar and look at the crude oil. What color is it? Is the liquid thick or runny?</span>
+              <span class="only he simple">1. פתחו את הצנצנת הכהה. מה הצבע של הנפט הגולמי? הנוזל סמיך או דליל?</span>
+              <span class="only he common">1. פתחו את הצנצנת הכהה והתבוננו בנפט הגולמי. מה צבעו? האם הנוזל סמיך או דליל?</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write the color and whether it is thick or thin.</span>
+              <span class="sr only en common">Write the color and whether the liquid is thick or runny.</span>
+              <span class="sr only he simple">כתבו את הצבע ואם הנוזל סמיך או דליל.</span>
+              <span class="sr only he common">כתבו את הצבע ואם הנוזל סמיך או דליל.</span>
+              <input id="oil-color" class="note" type="text" data-note="oil-color">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-color" data-i18n="send">Send</button>
+            </div>
+          </li>
+          <li class="oil-step" data-step="smell">
+            <p>
+              <span class="only en simple">2. Tap the dark jar again. Does the crude oil have a smell? Does the smell remind you of something you know?</span>
+              <span class="only en common">2. Tap the dark jar again and think about the smell. Does the crude oil have a smell? Does that smell remind you of something else you know?</span>
+              <span class="only he simple">2. הקישו שוב על הצנצנת הכהה. האם לנפט יש ריח? האם הריח מזכיר לכם משהו מוכר?</span>
+              <span class="only he common">2. הקישו שוב על הצנצנת הכהה וחשבו על הריח. האם לנפט הגולמי יש ריח? האם הריח מזכיר לכם משהו אחר?</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write about the smell.</span>
+              <span class="sr only en common">Write about the smell.</span>
+              <span class="sr only he simple">כתבו על הריח.</span>
+              <span class="sr only he common">כתבו על הריח.</span>
+              <input id="oil-smell" class="note" type="text" data-note="oil-smell">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-smell" data-i18n="send">Send</button>
+            </div>
+          </li>
+          <li class="oil-step" data-step="paper-crude">
+            <p>
+              <span class="only en simple">3. Open the dark jar, fill a dropper, and drag it onto the white paper. A dark stain appears.</span>
+              <span class="only en common">3. Open the dark jar, fill a dropper with crude oil, and drag it onto the clean white paper. The drop leaves a dark stain.</span>
+              <span class="only he simple">3. פתחו את הצנצנת הכהה, מלאו טפי, וגררו אותו אל הנייר הלבן. מופיע כתם כהה.</span>
+              <span class="only he common">3. פתחו את הצנצנת הכהה, מלאו טפי בנפט גולמי, וגררו אותו אל הנייר הלבן. הטיפה משאירה כתם כהה.</span>
+            </p>
+          </li>
+          <li class="oil-step" data-step="paper-cook">
+            <p>
+              <span class="only en simple">4. Open the golden jar, fill a dropper, and drag it onto the paper. Compare the two stains.</span>
+              <span class="only en common">4. Open the golden jar, fill a dropper with cooking oil, and drag it onto the paper. Compare the gold stain with the dark one.</span>
+              <span class="only he simple">4. פתחו את הצנצנת הזהובה, מלאו טפי, וגררו אותו אל הנייר. השוו את שני הכתמים.</span>
+              <span class="only he common">4. פתחו את הצנצנת הזהובה, מלאו טפי בשמן מאכל, וגררו אותו אל הנייר. השוו את הכתם הזהוב לכתם הכהה.</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write how the two spots are different.</span>
+              <span class="sr only en common">Write how the two spots are different.</span>
+              <span class="sr only he simple">כתבו במה שני הכתמים שונים.</span>
+              <span class="sr only he common">כתבו במה שני הכתמים שונים.</span>
+              <input id="oil-spots" class="note" type="text" data-note="oil-spots">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-spots" data-i18n="send">Send</button>
+            </div>
+          </li>
+          <li class="oil-step" data-step="cup-crude">
+            <p>
+              <span class="only en simple">5. Drag a full dropper of crude oil onto a glass. What happens to the oil?</span>
+              <span class="only en common">5. Drag a full dropper of crude oil onto either glass of water. What happens to the oil?</span>
+              <span class="only he simple">5. גררו טפי מלא בנפט גולמי אל כוס. מה קורה לנפט?</span>
+              <span class="only he common">5. גררו טפי מלא בנפט גולמי אל אחת מכוסות המים. מה קורה לנפט?</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write what happens to the crude oil.</span>
+              <span class="sr only en common">Write what happens to the crude oil.</span>
+              <span class="sr only he simple">כתבו מה קורה לנפט הגולמי.</span>
+              <span class="sr only he common">כתבו מה קורה לנפט הגולמי.</span>
+              <input id="oil-water-crude" class="note" type="text" data-note="oil-water-crude">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-water-crude" data-i18n="send">Send</button>
+            </div>
+          </li>
+          <li class="oil-step" data-step="cup-cook">
+            <p>
+              <span class="only en simple">6. Drag a full dropper of cooking oil onto a glass. What happens to the oil?</span>
+              <span class="only en common">6. Drag a full dropper of cooking oil onto either glass of water. What happens to the oil?</span>
+              <span class="only he simple">6. גררו טפי מלא בשמן מאכל אל כוס. מה קורה לשמן?</span>
+              <span class="only he common">6. גררו טפי מלא בשמן מאכל אל אחת מכוסות המים. מה קורה לשמן?</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write what happens to the cooking oil.</span>
+              <span class="sr only en common">Write what happens to the cooking oil.</span>
+              <span class="sr only he simple">כתבו מה קורה לשמן המאכל.</span>
+              <span class="sr only he common">כתבו מה קורה לשמן המאכל.</span>
+              <input id="oil-water-cook" class="note" type="text" data-note="oil-water-cook">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-water-cook" data-i18n="send">Send</button>
+            </div>
+          </li>
+          <li class="oil-step" data-step="smoke">
+            <p>
+              <span class="only en simple">7. When crude oil burns, do you see smoke and soot?</span>
+              <span class="only en common">7. When a few drops of crude oil burn, do you see smoke and soot?</span>
+              <span class="only he simple">7. כשנפט גולמי נשרף, רואים עשן ופיח?</span>
+              <span class="only he common">7. כשכמה טיפות נפט גולמי נשרפות, רואים עשן ופיח?</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write whether you see smoke and soot.</span>
+              <span class="sr only en common">Write whether you see smoke and soot.</span>
+              <span class="sr only he simple">כתבו אם רואים עשן ופיח.</span>
+              <span class="sr only he common">כתבו אם רואים עשן ופיח.</span>
+              <input id="oil-smoke" class="note" type="text" data-note="oil-smoke">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-smoke" data-i18n="send">Send</button>
+            </div>
+            <p>
+              <span class="only en simple">Write the properties of crude oil that you found.</span>
+              <span class="only en common">Sum up the properties of crude oil that you observed.</span>
+              <span class="only he simple">כתבו אילו תכונות מצאתם לנפט הגולמי.</span>
+              <span class="only he common">סכמו את תכונות הנפט הגולמי שראיתם.</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write the properties you found.</span>
+              <span class="sr only en common">Write the properties you observed.</span>
+              <span class="sr only he simple">כתבו את התכונות שמצאתם.</span>
+              <span class="sr only he common">כתבו את התכונות שראיתם.</span>
+              <input id="oil-properties" class="note" type="text" data-note="oil-properties">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-properties" data-i18n="send">Send</button>
+            </div>
+          </li>
+          <li class="oil-step" data-step="names">
+            <p>
+              <span class="only en simple">Think. Why do people also call crude oil earth oil and black gold?</span>
+              <span class="only en common">Think. Why is crude oil also called earth oil and black gold?</span>
+              <span class="only he simple">חישבו. מדוע קוראים לנפט הגולמי גם שמן אדמה וגם זהב שחור?</span>
+              <span class="only he common">חישבו. מדוע יש לנפט הגולמי גם שמות נוספים: שמן אדמה וזהב שחור?</span>
+            </p>
+            <label class="answer-line">
+              <span class="sr only en simple">Write why crude oil has these names.</span>
+              <span class="sr only en common">Write why crude oil is called earth oil and black gold.</span>
+              <span class="sr only he simple">כתבו מדוע אלה השמות של הנפט הגולמי.</span>
+              <span class="sr only he common">כתבו מדוע קוראים לנפט הגולמי שמן אדמה וזהב שחור.</span>
+              <input id="oil-names" class="note" type="text" data-note="oil-names">
+            </label>
+            <div class="send-row">
+              <button type="button" class="send" data-clear="oil-names" data-i18n="send">Send</button>
+            </div>
+          </li>
+        </ol>
+        <p class="oil-ready" hidden>
+          <span class="only en simple">The tests are done.</span>
+          <span class="only en common">You have finished the tests.</span>
+          <span class="only he simple">הבדיקות הסתיימו.</span>
+          <span class="only he common">סיימתם את הבדיקות.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector(".oil-game");
+      if (!root) return;
+      var stage = root.querySelector(".oil-stage");
+      var order = ["look", "smell", "paper-crude", "paper-cook", "cup-crude", "cup-cook"];
+      var rest = ["smoke", "names"];
+      var done = [];
+      var drag = null;
+      var darkClicks = 0;
+      var stain = { crude: false, cook: false };
+      var film = { crude: false, cook: false };
+      try {
+        localStorage.removeItem("woodToGas.oilSteps");
+      } catch (error) {}
+
+      function current() {
+        for (var i = 0; i < order.length; i += 1) {
+          if (done.indexOf(order[i]) === -1) return order[i];
+        }
+        return "names";
+      }
+
+      function render() {
+        var step = current();
+        var showRest = done.indexOf("cup-cook") !== -1;
+        order.concat(rest).forEach(function (name) {
+          var item = document.querySelector('.oil-step[data-step="' + name + '"]');
+          if (!item) return;
+          var open = done.indexOf(name) !== -1 || name === step || (showRest && rest.indexOf(name) !== -1);
+          item.classList.toggle("is-open", open);
+          item.classList.toggle("is-now", name === step && !showRest);
+          if (name === step && !showRest) item.setAttribute("aria-current", "step");
+          else item.removeAttribute("aria-current");
+        });
+        root.dataset.step = showRest ? "rest" : step;
+        var ready = document.querySelector(".oil-ready");
+        if (ready) ready.hidden = !showRest;
+      }
+
+      function advance() {
+        var guard = 0;
+        while (guard < 8) {
+          guard += 1;
+          var step = current();
+          var ok = false;
+          if (step === "look") ok = darkClicks >= 1;
+          else if (step === "smell") ok = darkClicks >= 2;
+          else if (step === "paper-crude") ok = stain.crude;
+          else if (step === "paper-cook") ok = stain.cook;
+          else if (step === "cup-crude") ok = film.crude;
+          else if (step === "cup-cook") ok = film.cook;
+          else break;
+          if (!ok) break;
+          done.push(step);
+        }
+        render();
+      }
+
+      function lidOpen(jar) {
+        var lid = root.querySelector('.oil-lid[data-jar="' + jar + '"]');
+        return !!(lid && lid.classList.contains("is-open"));
+      }
+
+      root.querySelectorAll(".oil-jar").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var jar = button.getAttribute("data-jar");
+          var lid = root.querySelector('.oil-lid[data-jar="' + jar + '"]');
+          if (!lid) return;
+          var open = !lid.classList.contains("is-open");
+          lid.classList.toggle("is-open", open);
+          button.setAttribute("aria-pressed", open ? "true" : "false");
+          if (jar === "crude") darkClicks += 1;
+          advance();
+        });
+      });
+
+      var tipAt = { far: [0.872, 0.624], near: [0.891, 0.580] };
+
+      function tipOf(dropper) {
+        var tip = tipAt[dropper.getAttribute("data-which")] || [0.9, 0.6];
+        var rect = dropper.getBoundingClientRect();
+        return { x: rect.left + rect.width * tip[0], y: rect.top + rect.height * tip[1] };
+      }
+
+      function inside(point, el) {
+        if (!el) return false;
+        var box = el.getBoundingClientRect();
+        return point.x >= box.left && point.x <= box.right && point.y >= box.top && point.y <= box.bottom;
+      }
+
+      function addStain(liquid, point) {
+        var box = stage.getBoundingClientRect();
+        var stains = root.querySelector(".oil-stains");
+        var marks = stains.querySelectorAll(".oil-stain");
+        if (marks.length >= 24) stains.removeChild(marks[0]);
+        var mark = document.createElement("span");
+        mark.className = "oil-stain";
+        mark.dataset.liquid = liquid;
+        mark.style.left = ((point.x - box.left) / box.width * 100) + "%";
+        mark.style.top = ((point.y - box.top) / box.height * 100) + "%";
+        stains.appendChild(mark);
+        stain[liquid] = true;
+      }
+
+      function addFilm(liquid, zone) {
+        var glass = root.querySelector('.oil-hit[data-zone="' + zone + '"]');
+        if (!glass) return;
+        glass.classList.add(liquid === "cook" ? "has-cook" : "has-crude");
+        film[liquid] = true;
+      }
+
+      function applyDrop(dropper, point) {
+        var held = dropper.getAttribute("data-held") || "";
+        if (inside(point, root.querySelector('.oil-jar[data-jar="cook"]')) && lidOpen("cook")) {
+          dropper.setAttribute("data-held", "cook");
+          return;
+        }
+        if (inside(point, root.querySelector('.oil-jar[data-jar="crude"]')) && lidOpen("crude")) {
+          dropper.setAttribute("data-held", "crude");
+          return;
+        }
+        if (!held) return;
+        if (inside(point, root.querySelector('.oil-hit[data-zone="cup1"]'))) {
+          addFilm(held, "cup1");
+        } else if (inside(point, root.querySelector('.oil-hit[data-zone="cup2"]'))) {
+          addFilm(held, "cup2");
+        } else if (inside(point, root.querySelector('.oil-hit[data-zone="paper"]'))) {
+          addStain(held, point);
+        }
+      }
+
+      function moveDrag(event) {
+        if (!drag || event.pointerId !== drag.id) return;
+        if (Math.abs(event.clientX - drag.x) > 8 || Math.abs(event.clientY - drag.y) > 8) drag.moved = true;
+        if (!drag.moved) return;
+        var dropper = drag.dropper;
+        if (!drag.pinned) {
+          dropper.style.width = dropper.getBoundingClientRect().width + "px";
+          drag.pinned = true;
+        }
+        var box = stage.getBoundingClientRect();
+        dropper.classList.add("is-dragging");
+        dropper.style.left = (event.clientX - drag.ox - box.left) + "px";
+        dropper.style.top = (event.clientY - drag.oy - box.top) + "px";
+      }
+
+      function finishDrag(event) {
+        if (!drag || event.pointerId !== drag.id) return;
+        var dropper = drag.dropper;
+        var moved = drag.moved;
+        var point = moved ? tipOf(dropper) : null;
+        drag = null;
+        dropper.classList.remove("is-dragging");
+        dropper.style.left = "";
+        dropper.style.top = "";
+        dropper.style.width = "";
+        try { dropper.releasePointerCapture(event.pointerId); } catch (error) {}
+        if (!moved || !point) return;
+        applyDrop(dropper, point);
+        advance();
+      }
+
+      document.addEventListener("pointermove", moveDrag);
+      document.addEventListener("pointerup", finishDrag);
+      document.addEventListener("pointercancel", finishDrag);
+
+      root.querySelectorAll(".oil-pipette").forEach(function (dropper) {
+        dropper.addEventListener("dragstart", function (event) { event.preventDefault(); });
+        dropper.addEventListener("pointerdown", function (event) {
+          if (event.button !== undefined && event.button !== 0) return;
+          if (drag) finishDrag({ pointerId: drag.id });
+          var rect = dropper.getBoundingClientRect();
+          drag = {
+            dropper: dropper,
+            id: event.pointerId,
+            ox: event.clientX - rect.left,
+            oy: event.clientY - rect.top,
+            x: event.clientX,
+            y: event.clientY,
+            moved: false
+          };
+          try { dropper.setPointerCapture(event.pointerId); } catch (error) {}
+          event.preventDefault();
+        });
+        dropper.addEventListener("lostpointercapture", function (event) {
+          finishDrag(event);
+        });
+      });
+
+      render();
+    })();
+  </script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

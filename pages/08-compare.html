@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Coal and charcoal</span>
+        <span class="only en common">Coal and charcoal</span>
+        <span class="only he simple">פחם ופחם-עץ</span>
+        <span class="only he common">פחם ופחם-עץ</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, tell coal and charcoal apart.</span>
+        <span class="only en common">By the end of this page, compare coal with charcoal.</span>
+        <span class="only he simple">בסוף העמוד תוכלו להבדיל בין פחם לפחם-עץ.</span>
+        <span class="only he common">בסוף העמוד תוכלו להשוות בין פחם לפחם-עץ.</span>
+      </p>
+      <p>
+        <span class="only en simple">Put what you found into the table. One column is for the coal. The other is for the charcoal.</span>
+        <span class="only en common">Organize what you observed in the table. Use one column for the coal and the other for the charcoal.</span>
+        <span class="only he simple">סדרו בטבלה את מה שמצאתם. טור אחד לפחם, וטור אחד לפחם-העץ.</span>
+        <span class="only he common">ארגנו בטבלה שלפניכם את המידע שאספתם, כל דבר בטור המתאים.</span>
+      </p>
+      <div class="word">
+        <h3>
+          <span class="only en simple">Charcoal</span>
+          <span class="only en common">A word: charcoal</span>
+          <span class="only he simple">פחם-עץ</span>
+          <span class="only he common">פחם-עץ</span>
+        </h3>
+        <p>
+          <span class="only en simple">Charcoal is פחם-עץ. People make it from wood. Coal is the rock from under the ground. They are not the same.</span>
+          <span class="only en common">Charcoal, called פחם-עץ in Hebrew, is made by heating wood. Coal is a rock dug from the ground. The names are close, but the materials are different.</span>
+          <span class="only he simple">פחם-עץ מכינים מעץ. פחם הוא סלע שמוציאים מהאדמה. אלה לא אותו דבר.</span>
+          <span class="only he common">פחם-עץ מפיקים מעץ בחימום. פחם הוא סלע שכורים מן האדמה. השמות קרובים, אבל החומרים שונים.</span>
+        </p>
+      </div>
+      <table class="compare">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col" id="compare-coal">
+              <span class="only en simple">Coal</span>
+              <span class="only en common">Coal</span>
+              <span class="only he simple">פחם</span>
+              <span class="only he common">פחם</span>
+            </th>
+            <th scope="col" id="compare-char">
+              <span class="only en simple">Charcoal</span>
+              <span class="only en common">Charcoal</span>
+              <span class="only he simple">פחם-עץ</span>
+              <span class="only he common">פחם-עץ</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" id="compare-color">
+              <span class="only en simple">Color</span>
+              <span class="only en common">Color</span>
+              <span class="only he simple">צבע</span>
+              <span class="only he common">צבע</span>
+            </th>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-color-coal" aria-labelledby="compare-color compare-coal"></td>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-color-char" aria-labelledby="compare-color compare-char"></td>
+          </tr>
+          <tr>
+            <th scope="row" id="compare-feel">
+              <span class="only en simple">How it feels</span>
+              <span class="only en common">Texture</span>
+              <span class="only he simple">מישוש</span>
+              <span class="only he common">מירקם</span>
+            </th>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-feel-coal" aria-labelledby="compare-feel compare-coal"></td>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-feel-char" aria-labelledby="compare-feel compare-char"></td>
+          </tr>
+          <tr>
+            <th scope="row" id="compare-shine">
+              <span class="only en simple">Shine</span>
+              <span class="only en common">Shine</span>
+              <span class="only he simple">ברק</span>
+              <span class="only he common">ברק</span>
+            </th>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-shine-coal" aria-labelledby="compare-shine compare-coal"></td>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-shine-char" aria-labelledby="compare-shine compare-char"></td>
+          </tr>
+          <tr>
+            <th scope="row" id="compare-break">
+              <span class="only en simple">How it breaks</span>
+              <span class="only en common">How it breaks</span>
+              <span class="only he simple">שבירה</span>
+              <span class="only he common">שבירות</span>
+            </th>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-break-coal" aria-labelledby="compare-break compare-coal"></td>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-break-char" aria-labelledby="compare-break compare-char"></td>
+          </tr>
+          <tr>
+            <th scope="row" id="compare-float">
+              <span class="only en simple">Floats or sinks</span>
+              <span class="only en common">Floats or sinks in water</span>
+              <span class="only he simple">צף או שוקע</span>
+              <span class="only he common">צף או שוקע במים</span>
+            </th>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-float-coal" aria-labelledby="compare-float compare-coal"></td>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-float-char" aria-labelledby="compare-float compare-char"></td>
+          </tr>
+          <tr>
+            <th scope="row" id="compare-other">
+              <span class="only en simple">Anything else</span>
+              <span class="only en common">Other properties</span>
+              <span class="only he simple">עוד דברים</span>
+              <span class="only he common">תכונות נוספות</span>
+            </th>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-other-coal" aria-labelledby="compare-other compare-coal"></td>
+            <td><input class="note" type="text" autocomplete="off" data-note="compare-other-char" aria-labelledby="compare-other compare-char"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span class="only en simple">Hold the charcoal next to the coal. Think about what you already know about charcoal. How are the two lumps the same, and how are they different? Write that in your notebook.</span>
+        <span class="only en common">Take the lump of charcoal and set it beside the lump of coal. Recall what you have learned about charcoal. In what ways are they alike, and in what ways are they different? Write the comparison in your notebook.</span>
+        <span class="only he simple">קחו את גוש פחם-העץ והניחו אותו ליד גוש הפחם. היזכרו במה שאתם יודעים על פחם-עץ. במה הם דומים ובמה הם שונים? כתבו במחברת.</span>
+        <span class="only he common">קחו את גוש פחם-העץ והניחו אותו ליד גוש הפחם. היזכרו במה שלמדתם על פחם-העץ. במה שני הגושים דומים, ובמה הם שונים? רשמו את ההשוואה במחברת.</span>
+      </p>
+      <figure>
+        <img src="../images/coal-pair.jpg" alt="A shiny black lump of coal beside a dull, hole-filled lump of charcoal." data-i18n-alt="pairAlt">
+        <figcaption>
+          <span class="only en simple">The shiny lump is coal. The dull lump with holes is charcoal.</span>
+          <span class="only en common">The glossy black lump is coal. The dull, porous lump is charcoal.</span>
+          <span class="only he simple">הגוש המבריק הוא פחם. הגוש העמום עם החורים הוא פחם-עץ.</span>
+          <span class="only he common">הגוש השחור והמבריק הוא פחם. הגוש העמום והמחורר הוא פחם-עץ.</span>
+        </figcaption>
+      </figure>
+      <div class="task">
+        <h3>
+          <span class="only en simple">A question</span>
+          <span class="only en common">A question</span>
+          <span class="only he simple">שאלה</span>
+          <span class="only he common">שאלה</span>
+        </h3>
+        <p>
+          <span class="only en simple">Now that you know coal and charcoal, can you tell them apart?</span>
+          <span class="only en common">After you have come to know coal and charcoal, can you tell these two fuels apart?</span>
+          <span class="only he simple">אחרי שהכרתם פחם ופחם-עץ, אתם יכולים להבדיל ביניהם?</span>
+          <span class="only he common">לאחר שהכרתם פחם ופחם-עץ, התוכלו להבדיל בין שני חומרי הדלק האלה?</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write whether you can tell them apart.</span>
+          <span class="sr only en common">Write whether you can tell coal and charcoal apart.</span>
+          <span class="sr only he simple">כתבו אם אתם יכולים להבדיל ביניהם.</span>
+          <span class="sr only he common">כתבו אם אתם יכולים להבדיל בין הפחם לפחם-העץ.</span>
+          <input id="compare-apart" class="note" type="text" data-note="compare-apart">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="compare-apart" data-i18n="send">Send</button>
+        </div>
+        <p>
+          <span class="only en simple">Remember: people make charcoal from wood. Nobody makes stone coal. It is a natural rock.</span>
+          <span class="only en common">Remember: charcoal is made from wood, much as you may have done in class. People do not make stone coal. It is a natural rock.</span>
+          <span class="only he simple">זכרו: פחם-עץ מכינים מעץ. את פחם-האבן אף אחד לא מכין. זה סלע מן הטבע.</span>
+          <span class="only he common">זכרו: את פחם-העץ מייצרים מעץ, בדרך דומה למה שאפשר לעשות בכיתה. את פחם-האבן אין האדם מייצר. זהו סלע טבעי.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Before engines and after</span>
+        <span class="only en common">Life before engines and after them</span>
+        <span class="only he simple">לפני המנועים ואחריהם</span>
+        <span class="only he common">החיים לפני המנועים ואחריהם</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say what engines changed in travel and in work.</span>
+        <span class="only en common">By the end of this page, explain what changed in travel and in work after engines were invented.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר מה המנועים שינו בנסיעה ובעבודה.</span>
+        <span class="only he common">בסוף העמוד תוכלו להסביר מה השתנה בנסיעות ובעבודה אחרי המצאת המנועים.</span>
+      </p>
+      <p>
+        <span class="only en simple">These pictures show life before engines and life after engines.</span>
+        <span class="only en common">Here are four pictures. Two show travel and work without an engine, and two show what happened when engines arrived.</span>
+        <span class="only he simple">התמונות מראות את החיים לפני המנועים ואת החיים שאחריהם.</span>
+        <span class="only he common">לפניכם ארבע תמונות. שתיים מהן מראות נסיעה ומלאכה בלי מנוע, ושתיים מראות מה קרה כשהגיעו המנועים.</span>
+      </p>
+      <div class="comics">
+        <figure>
+          <img src="../images/before-coach.jpg" alt="A green horse-drawn coach on a dusty road, with a driver and two horses." data-i18n-alt="c1Alt">
+          <figcaption>
+            <span class="only en simple">1. With all the people and the load, the trip to the next town takes a whole day.</span>
+            <span class="only en common">1. With all the passengers and the cargo, a whole day will pass before we reach the nearby town.</span>
+            <span class="only he simple">1. עם כל האנשים והמטען, הדרך לעיירה לוקחת יום שלם.</span>
+            <span class="only he common">1. עם כל הנוסעים והמטען יעבור יום שלם עד שנגיע לעיירה הסמוכה.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/after-train.jpg" alt="A green steam train passes brick factories with tall chimneys." data-i18n-alt="c2Alt">
+          <figcaption>
+            <span class="only en simple">2. In one hour I can take all the people and the load to the next town.</span>
+            <span class="only en common">2. In one hour I carry all the passengers and all the cargo to the nearby town.</span>
+            <span class="only he simple">2. בשעה אחת אני מביאה את כולם ואת המטען לעיירה.</span>
+            <span class="only he common">2. בשעה אחת אני מעבירה את כל הנוסעים ואת כל המטען לעיירה הסמוכה.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/before-smith.jpg" alt="In a workshop, a craftsperson shows one metal bucket to a customer." data-i18n-alt="c3Alt">
+          <figcaption>
+            <span class="only en simple">3. Sir, your bucket will be ready tomorrow.</span>
+            <span class="only en common">3. Sir, the bucket will be ready tomorrow.</span>
+            <span class="only he simple">3. אדוני, הדלי מוכן רק מחר.</span>
+            <span class="only he common">3. אדוני, הדלי יהיה מוכן מחר.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/after-factory.jpg" alt="A man in a blue jacket points up beside a cart piled with metal buckets." data-i18n-alt="c4Alt">
+          <figcaption>
+            <span class="only en simple">4. By tomorrow I will have 3,000 buckets ready.</span>
+            <span class="only en common">4. By tomorrow I can send you a load of 3,000 buckets.</span>
+            <span class="only he simple">4. עד מחר אכין 3,000 דליים.</span>
+            <span class="only he common">4. עד מחר אכין לך משלוח של 3,000 דליים.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="task">
+        <h3>
+          <span class="only en simple">A task</span>
+          <span class="only en common">A task</span>
+          <span class="only he simple">משימה</span>
+          <span class="only he common">משימה</span>
+        </h3>
+        <p>
+          <span class="only en simple">Look at pictures 1 and 2. What changed in travel when engines were invented?</span>
+          <span class="only en common">Look at pictures 1 and 2. Explain what changed in travel after engines were invented.</span>
+          <span class="only he simple">הסתכלו בתמונות 1 ו-2. מה השתנה בנסיעה כשהמציאו מנועים?</span>
+          <span class="only he common">התבוננו בתמונות 1 ו-2. הסבירו מה השתנה בנסיעה אחרי שהופיעו מנועים.</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write what changed in travel.</span>
+          <span class="sr only en common">Write what changed in travel.</span>
+          <span class="sr only he simple">כתבו מה השתנה בנסיעה.</span>
+          <span class="sr only he common">כתבו מה השתנה בנסיעה.</span>
+          <input id="changes-1" class="note" type="text" data-note="changes1">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="changes1" data-i18n="send">Send</button>
+        </div>
+        <p>
+          <span class="only en simple">Which way is faster and easier?</span>
+          <span class="only en common">Which way is more comfortable, faster, and easier?</span>
+          <span class="only he simple">איזו דרך מהירה וקלה יותר?</span>
+          <span class="only he common">איזו דרך נוחה יותר, מהירה יותר וקלה יותר?</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write which way is faster and easier.</span>
+          <span class="sr only en common">Write which way is more comfortable, faster, and easier.</span>
+          <span class="sr only he simple">כתבו איזו דרך מהירה וקלה יותר.</span>
+          <span class="sr only he common">כתבו איזו דרך נוחה יותר, מהירה יותר וקלה יותר.</span>
+          <input id="changes-2" class="note" type="text" data-note="changes2">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="changes2" data-i18n="send">Send</button>
+        </div>
+        <p>
+          <span class="only en simple">Look at pictures 3 and 4. Why did the bucket factory leave the tinsmith without work?</span>
+          <span class="only en common">Look at pictures 3 and 4. Can you explain why the bucket factory left the tinsmith out of work?</span>
+          <span class="only he simple">הסתכלו בתמונות 3 ו-4. למה בית החרושת לדליים השאיר את הפחח בלי עבודה?</span>
+          <span class="only he common">התבוננו בתמונות 3 ו-4. הסבירו מדוע בית החרושת לדליים השאיר את הפחח מחוסר עבודה.</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write why the tinsmith lost the work.</span>
+          <span class="sr only en common">Write why the tinsmith was left without work.</span>
+          <span class="sr only he simple">כתבו למה הפחח נשאר בלי עבודה.</span>
+          <span class="sr only he common">כתבו מדוע הפחח נשאר מחוסר עבודה.</span>
+          <input id="changes-3" class="note" type="text" data-note="changes3">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="changes3" data-i18n="send">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

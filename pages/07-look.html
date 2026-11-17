@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Get to know coal</span>
+        <span class="only en common">Get to know the coal</span>
+        <span class="only he simple">הכירו את הפחם</span>
+        <span class="only he common">הכירו את הפחם</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say what you noticed about coal.</span>
+        <span class="only en common">By the end of this page, describe what the tests show about coal.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר מה גיליתם על הפחם.</span>
+        <span class="only he common">בסוף העמוד תוכלו לתאר מה הבדיקות מראות על הפחם.</span>
+      </p>
+      <p>
+        <span class="only en simple">Sometimes a lump of coal shows the shape of a plant, like a fern or a tree trunk. That shows coal was made from plants. Fossils are clues from long ago.</span>
+        <span class="only en common">Sometimes a lump of coal holds the shape of a plant, such as a fern or a tree trunk. Those shapes show that coal was formed from plants. Fossils are evidence from the past.</span>
+        <span class="only he simple">לפעמים רואים בגוש פחם צורה של צמח, כמו שרך או גזע. זה מראה שהפחם נוצר מצמחים. מאובנים הם עקבות מן העבר.</span>
+        <span class="only he common">לפעמים מגלים בגוש פחם צורה של צמח, למשל שרך או גזע עץ. הצורות האלה מעידות שהפחם נוצר מצמחים. מאובנים הם עדות מן העבר.</span>
+      </p>
+      <figure>
+        <img src="../images/coal-fossil.jpg" alt="A black lump of coal with a fern shape pressed into it." data-i18n-alt="fossilAlt">
+        <figcaption>
+          <span class="only en simple">A fern shape in a lump of coal.</span>
+          <span class="only en common">A fern left its shape in this lump of coal.</span>
+          <span class="only he simple">צורת שרך בגוש פחם.</span>
+          <span class="only he common">שרך השאיר את צורתו בגוש הפחם הזה.</span>
+        </figcaption>
+      </figure>
+      <div class="word">
+        <h3>
+          <span class="only en simple">A mine</span>
+          <span class="only en common">A word: mine</span>
+          <span class="only he simple">מכרה</span>
+          <span class="only he common">מכרה</span>
+        </h3>
+        <p>
+          <span class="only en simple">A mine is a deep hole people dig to take out something useful, like coal, salt, or diamonds. A person who works in a mine is a miner.</span>
+          <span class="only en common">A mine is a pit people dig in the ground to bring out useful materials. Some mines give coal, some give diamonds, and some give salt. A person who works in a mine is called a miner.</span>
+          <span class="only he simple">מכרה הוא בור שבני אדם חופרים באדמה כדי להוציא דבר מועיל, כמו פחם, מלח או יהלומים. מי שעובד במכרה הוא כורה.</span>
+          <span class="only he common">מכרה הוא בור או חפירה שבני האדם עושים באדמה כדי להוציא חומרים מועילים. יש מכרות של פחם, של יהלומים ושל מלח. אדם שעובד במכרה נקרא כורה.</span>
+        </p>
+      </div>
+      <div class="task">
+        <p>
+          <span class="only en simple">Everything is already on the tray.</span>
+          <span class="only en common">Everything is already on the tray.</span>
+          <span class="only he simple">הכול כבר על המגש.</span>
+          <span class="only he common">כל החפצים כבר מונחים על המגש.</span>
+        </p>
+        <p>
+          <span class="only en simple">1. Drag the coal across the paper to draw.</span>
+          <span class="only en common">1. Drag the coal across the paper and it draws.</span>
+          <span class="only he simple">1. גררו את הפחם על הנייר כדי לצייר.</span>
+          <span class="only he common">1. גררו את הפחם על הנייר והוא מצייר.</span>
+        </p>
+        <p>
+          <span class="only en simple">2. Drag the coal onto the towel and the towel gets dirty.</span>
+          <span class="only en common">2. Drag the coal onto the towel and the towel gets dirty.</span>
+          <span class="only he simple">2. גררו את הפחם אל המגבת והיא מתלכלכת.</span>
+          <span class="only he common">2. גררו את הפחם אל המגבת כדי ללכלך אותה.</span>
+        </p>
+        <p>
+          <span class="only en simple">3. Drag the towel across that drawing and it smears.</span>
+          <span class="only en common">3. Drag the towel across that drawing and the mark smears.</span>
+          <span class="only he simple">3. גררו את המגבת על הציור והוא נמרח.</span>
+          <span class="only he common">3. גררו את המגבת על הציור כדי למרוח אותו.</span>
+        </p>
+        <p>
+          <span class="only en simple">4. Drag the hammer onto the coal to break it.</span>
+          <span class="only en common">4. Drag the hammer onto the coal to break the lump.</span>
+          <span class="only he simple">4. גררו את הפטיש אל הפחם כדי לשבור אותו.</span>
+          <span class="only he common">4. גררו את הפטיש אל הפחם כדי לשבור את הגוש.</span>
+        </p>
+        <p>
+          <span class="only en simple">5. Drag a piece onto the water.</span>
+          <span class="only en common">5. Drag a piece onto the water.</span>
+          <span class="only he simple">5. גררו חתיכה אל המים.</span>
+          <span class="only he common">5. גררו חתיכה אל המים.</span>
+        </p>
+      </div>
+      <div class="tray-game">
+        <div class="tray-board" data-tray>
+          <img class="tray-scene" src="../images/tray-empty.jpg" alt="An empty metal tray on a wooden table." data-i18n-alt="trayEmptyAlt">
+        </div>
+        <div class="tray-bank" data-bank>
+          <button type="button" class="tray-piece" data-piece="coal" aria-pressed="false">
+            <img src="../images/piece-coal.png" alt="" draggable="false">
+            <span class="piece-name">
+              <span class="only en simple">Coal</span>
+              <span class="only en common">Coal</span>
+              <span class="only he simple">פחם</span>
+              <span class="only he common">פחם</span>
+            </span>
+          </button>
+          <button type="button" class="tray-piece" data-piece="paper" aria-pressed="false">
+            <img src="../images/piece-paper.png" alt="" draggable="false">
+            <canvas class="paper-sheet" aria-hidden="true"></canvas>
+            <span class="piece-name">
+              <span class="only en simple">Paper</span>
+              <span class="only en common">Paper</span>
+              <span class="only he simple">נייר</span>
+              <span class="only he common">נייר</span>
+            </span>
+          </button>
+          <button type="button" class="tray-piece" data-piece="hammer" aria-pressed="false">
+            <img src="../images/piece-hammer.png" alt="" draggable="false">
+            <span class="piece-name">
+              <span class="only en simple">Hammer</span>
+              <span class="only en common">Hammer</span>
+              <span class="only he simple">פטיש</span>
+              <span class="only he common">פטיש</span>
+            </span>
+          </button>
+          <button type="button" class="tray-piece" data-piece="cup" aria-pressed="false">
+            <img src="../images/piece-cup.png" alt="" draggable="false">
+            <span class="cup-water"></span>
+            <span class="piece-name">
+              <span class="only en simple">Water</span>
+              <span class="only en common">Cup of water</span>
+              <span class="only he simple">מים</span>
+              <span class="only he common">כוס מים</span>
+            </span>
+          </button>
+          <button type="button" class="tray-piece" data-piece="towel" aria-pressed="false">
+            <img src="../images/piece-towel.png" alt="" draggable="false">
+            <canvas class="towel-sheet" aria-hidden="true"></canvas>
+            <span class="piece-name">
+              <span class="only en simple">Towel</span>
+              <span class="only en common">Towel</span>
+              <span class="only he simple">מגבת</span>
+              <span class="only he common">מגבת</span>
+            </span>
+          </button>
+        </div>
+        <p class="tray-ready" hidden aria-live="polite">
+          <span class="only en simple">The tray is ready.</span>
+          <span class="only en common">The tray is ready.</span>
+          <span class="only he simple">המגש מוכן.</span>
+          <span class="only he common">המגש מוכן.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector(".tray-game");
+      if (!root) return;
+      var board = root.querySelector("[data-tray]");
+      var bank = root.querySelector("[data-bank]");
+      var ready = root.querySelector(".tray-ready");
+      var pieces = [].slice.call(root.querySelectorAll(".tray-piece"));
+      var paper = root.querySelector('[data-piece="paper"]');
+      var coal = root.querySelector('[data-piece="coal"]');
+      var hammer = root.querySelector('[data-piece="hammer"]');
+      var cup = root.querySelector('[data-piece="cup"]');
+      var drag = null;
+      var leftTray = false;
+      var smearPad = null;
+      var state = { placed: [], pos: {}, broken: false, shards: [], drawing: "", towel: "" };
+      var coalImg = coal.querySelector("img");
+      var towel = root.querySelector('[data-piece="towel"]');
+
+      function snapshot() {
+        var placed = pieces.filter(function (piece) {
+          return piece.classList.contains("on-tray");
+        }).map(function (piece) {
+          return piece.getAttribute("data-piece");
+        });
+        var pos = {};
+        pieces.forEach(function (piece) {
+          if (!piece.style.left) return;
+          pos[piece.getAttribute("data-piece")] = [piece.style.left, piece.style.top];
+        });
+        var water = cup.querySelector(".cup-water");
+        var waterBox = water.getBoundingClientRect();
+        var shards = [].map.call(root.querySelectorAll(".coal-shard"), function (shard) {
+          var floating = shard.classList.contains("is-floating");
+          var item = {
+            i: Number(shard.dataset.shard),
+            w: shard.dataset.boardW || "",
+            h: shard.dataset.boardH || "",
+            tilt: shard.style.getPropertyValue("--tilt") || "",
+            float: floating
+          };
+          if (floating && waterBox.width) {
+            item.x = (parseFloat(shard.style.left) / waterBox.width * 100) + "%";
+            item.y = (parseFloat(shard.style.top) / waterBox.height * 100) + "%";
+            item.fw = (shard.offsetWidth / waterBox.width * 100) + "%";
+            item.fh = (shard.offsetHeight / waterBox.height * 100) + "%";
+          } else {
+            item.x = shard.style.left;
+            item.y = shard.style.top;
+          }
+          return item;
+        });
+        state.placed = placed;
+        state.pos = pos;
+        state.shards = shards;
+        if (placed.length !== pieces.length) leftTray = true;
+        ready.hidden = !(leftTray && placed.length === pieces.length);
+        bank.classList.toggle("is-empty", !bank.querySelector(".tray-piece:not(.coal-shard)"));
+      }
+
+      function boardBox() {
+        return board.getBoundingClientRect();
+      }
+
+      function placePx(piece, left, top) {
+        var box = boardBox();
+        piece.style.left = ((left - box.left) / box.width * 100) + "%";
+        piece.style.top = ((top - box.top) / box.height * 100) + "%";
+      }
+
+      function pinHome(piece) {
+        if (piece.style.left) return;
+        var box = boardBox();
+        var rect = piece.getBoundingClientRect();
+        piece.style.left = ((rect.left - box.left) / box.width * 100) + "%";
+        piece.style.top = ((rect.top - box.top) / box.height * 100) + "%";
+      }
+
+      function putHome(piece) {
+        board.appendChild(piece);
+        piece.classList.add("on-tray");
+        piece.setAttribute("aria-pressed", "true");
+        piece.style.left = "";
+        piece.style.top = "";
+        piece.style.transform = "";
+      }
+
+      function dropOnTray(piece, rect) {
+        var cx = rect.left + rect.width / 2;
+        var cy = rect.top + rect.height / 2;
+        putHome(piece);
+        var box = boardBox();
+        var w = piece.offsetWidth;
+        var h = piece.offsetHeight;
+        piece.style.left = ((cx - w / 2 - box.left) / box.width * 100) + "%";
+        piece.style.top = ((cy - h / 2 - box.top) / box.height * 100) + "%";
+      }
+
+      function spill() {
+        var floaters = [].slice.call(cup.querySelectorAll(".coal-shard"));
+        floaters.forEach(function (shard) {
+          var rect = shard.getBoundingClientRect();
+          board.appendChild(shard);
+          shard.classList.remove("is-floating");
+          shard.style.width = shard.dataset.boardW || "";
+          placePx(shard, rect.left, rect.top);
+        });
+      }
+
+      function takeOff(piece) {
+        if (piece === cup) spill();
+        if (piece === coal && state.broken) return;
+        bank.appendChild(piece);
+        piece.classList.remove("on-tray");
+        piece.setAttribute("aria-pressed", "false");
+        piece.style.left = "";
+        piece.style.top = "";
+        piece.style.transform = "";
+      }
+
+      function contactPoint(piece) {
+        var rect = piece.getBoundingClientRect();
+        var lower = piece.classList.contains("coal-shard") ? 0.62 : 0.7;
+        return { x: rect.left + rect.width * 0.5, y: rect.top + rect.height * lower };
+      }
+
+      function fitSheet() {
+        if (!paper.classList.contains("on-tray")) return null;
+        var canvas = paper.querySelector(".paper-sheet");
+        var cssW = canvas.clientWidth;
+        var cssH = canvas.clientHeight;
+        if (!cssW || !cssH) return null;
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var bw = Math.round(cssW * dpr);
+        var bh = Math.round(cssH * dpr);
+        if (canvas.width !== bw || canvas.height !== bh) {
+          canvas.width = bw;
+          canvas.height = bh;
+          var ctx = canvas.getContext("2d");
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          if (state.drawing) paintStored(canvas, state.drawing);
+        }
+        return canvas;
+      }
+
+      function paintStored(canvas, url) {
+        var img = new Image();
+        img.onload = function () {
+          var dpr = Math.min(window.devicePixelRatio || 1, 2);
+          var ctx = canvas.getContext("2d");
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          ctx.drawImage(img, 0, 0, canvas.clientWidth, canvas.clientHeight);
+        };
+        img.src = url;
+      }
+
+      function saveDrawing() {
+        var canvas = paper.querySelector(".paper-sheet");
+        if (!canvas.width) return;
+        try { state.drawing = canvas.toDataURL("image/png"); } catch (error) {}
+      }
+
+      function drawMark(piece) {
+        var canvas = fitSheet();
+        if (!canvas || !drag) return;
+        var point = contactPoint(piece);
+        var box = canvas.getBoundingClientRect();
+        var x = point.x - box.left;
+        var y = point.y - box.top;
+        var inside = x >= -2 && y >= -2 && x <= box.width + 2 && y <= box.height + 2;
+        if (!inside) {
+          drag.lastDraw = null;
+          return;
+        }
+        x = Math.max(0, Math.min(box.width, x));
+        y = Math.max(0, Math.min(box.height, y));
+        var prev = drag.lastDraw;
+        drag.lastDraw = { x: x, y: y };
+        if (prev && Math.hypot(x - prev.x, y - prev.y) > 90) return;
+        var ctx = canvas.getContext("2d");
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var x0 = prev ? prev.x : x;
+        var y0 = prev ? prev.y : y;
+        var heavy = piece === coal;
+        var dist = Math.hypot(x - x0, y - y0);
+        var steps = Math.max(1, Math.round(dist / 1.5));
+        for (var i = 0; i <= steps; i += 1) {
+          var t = i / steps;
+          var px = x0 + (x - x0) * t;
+          var py = y0 + (y - y0) * t;
+          var radius = (heavy ? 3.1 : 1.6) * (0.62 + Math.random() * 0.7);
+          ctx.globalAlpha = heavy ? 0.5 : 0.38;
+          ctx.fillStyle = "#221e1a";
+          ctx.beginPath();
+          ctx.ellipse(px, py, radius, radius * 0.62, Math.random() * Math.PI, 0, Math.PI * 2);
+          ctx.fill();
+          if (Math.random() < 0.45) {
+            ctx.globalAlpha = 0.22;
+            ctx.fillRect(px + (Math.random() - 0.5) * 6, py + (Math.random() - 0.5) * 6, 1.15, 1.15);
+          }
+        }
+        ctx.globalAlpha = 1;
+        drag.drew = true;
+      }
+
+      function fitCloth() {
+        if (!towel.classList.contains("on-tray")) return null;
+        var canvas = towel.querySelector(".towel-sheet");
+        var cssW = canvas.clientWidth;
+        var cssH = canvas.clientHeight;
+        if (!cssW || !cssH) return null;
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var bw = Math.round(cssW * dpr);
+        var bh = Math.round(cssH * dpr);
+        if (canvas.width !== bw || canvas.height !== bh) {
+          canvas.width = bw;
+          canvas.height = bh;
+          var ctx = canvas.getContext("2d");
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          if (state.towel) paintStored(canvas, state.towel);
+        }
+        return canvas;
+      }
+
+      function saveTowel() {
+        var canvas = towel.querySelector(".towel-sheet");
+        if (!canvas.width) return;
+        try { state.towel = canvas.toDataURL("image/png"); } catch (error) {}
+      }
+
+      function soilTowel(piece) {
+        var canvas = fitCloth();
+        if (!canvas || !drag || !towel.classList.contains("on-tray")) return;
+        var point = contactPoint(piece);
+        var box = canvas.getBoundingClientRect();
+        var x = point.x - box.left;
+        var y = point.y - box.top;
+        if (x < -2 || y < -2 || x > box.width + 2 || y > box.height + 2) {
+          drag.lastSoil = null;
+          return;
+        }
+        x = Math.max(0, Math.min(box.width, x));
+        y = Math.max(0, Math.min(box.height, y));
+        var prev = drag.lastSoil;
+        drag.lastSoil = { x: x, y: y };
+        if (prev && Math.hypot(x - prev.x, y - prev.y) > 90) return;
+        var ctx = canvas.getContext("2d");
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var x0 = prev ? prev.x : x;
+        var y0 = prev ? prev.y : y;
+        var dist = Math.hypot(x - x0, y - y0);
+        var steps = Math.max(1, Math.round(dist / 1.6));
+        var heavy = piece === coal;
+        for (var i = 0; i <= steps; i += 1) {
+          var t = i / steps;
+          var px = x0 + (x - x0) * t;
+          var py = y0 + (y - y0) * t;
+          var radius = (heavy ? 5.2 : 2.6) * (0.7 + Math.random() * 0.55);
+          ctx.globalAlpha = heavy ? 0.42 : 0.3;
+          ctx.fillStyle = "#2a241c";
+          ctx.beginPath();
+          ctx.ellipse(px, py, radius, radius * 0.55, Math.random() * Math.PI, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        towel.classList.add("is-dirty");
+        drag.dirtied = true;
+      }
+
+      function smearDrawing(piece) {
+        var canvas = fitSheet();
+        if (!canvas || !drag) return;
+        var box = canvas.getBoundingClientRect();
+        var rect = piece.getBoundingClientRect();
+        var rubLeft = rect.left + rect.width * 0.18;
+        var rubTop = rect.top + rect.height * 0.22;
+        var rubRight = rect.right - rect.width * 0.18;
+        var rubBottom = rect.bottom - rect.height * 0.2;
+        var x0 = Math.max(box.left, rubLeft);
+        var y0 = Math.max(box.top, rubTop);
+        var x1 = Math.min(box.right, rubRight);
+        var y1 = Math.min(box.bottom, rubBottom);
+        if (x1 - x0 < 6 || y1 - y0 < 6) {
+          drag.lastSmear = null;
+          return;
+        }
+        var cx = (x0 + x1) / 2 - box.left;
+        var cy = (y0 + y1) / 2 - box.top;
+        var prev = drag.lastSmear;
+        drag.lastSmear = { x: cx, y: cy };
+        if (!prev) return;
+        var dx = cx - prev.x;
+        var dy = cy - prev.y;
+        var travel = Math.hypot(dx, dy);
+        if (travel < 1.5 || travel > 80) return;
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var sx = Math.max(0, Math.round((x0 - box.left) * dpr));
+        var sy = Math.max(0, Math.round((y0 - box.top) * dpr));
+        var sw = Math.min(canvas.width - sx, Math.round((x1 - x0) * dpr));
+        var sh = Math.min(canvas.height - sy, Math.round((y1 - y0) * dpr));
+        if (sw < 2 || sh < 2) return;
+        var ctx = canvas.getContext("2d");
+        var data;
+        try { data = ctx.getImageData(sx, sy, sw, sh); } catch (error) { return; }
+        var ink = false;
+        for (var i = 3; i < data.data.length; i += 16) {
+          if (data.data[i] > 24) { ink = true; break; }
+        }
+        if (!ink) return;
+        if (!smearPad) smearPad = document.createElement("canvas");
+        smearPad.width = sw;
+        smearPad.height = sh;
+        smearPad.getContext("2d").putImageData(data, 0, 0);
+        var cssX = sx / dpr;
+        var cssY = sy / dpr;
+        var cssW = sw / dpr;
+        var cssH = sh / dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.save();
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.globalAlpha = 0.5;
+        ctx.fillRect(cssX, cssY, cssW, cssH);
+        ctx.globalCompositeOperation = "source-over";
+        ctx.globalAlpha = 0.82;
+        ctx.drawImage(smearPad, cssX + dx * 0.9, cssY + dy * 0.9, cssW, cssH);
+        ctx.globalAlpha = 0.28;
+        ctx.drawImage(smearPad, cssX + dx * 0.35 + 1.4, cssY + dy * 0.35, cssW, cssH);
+        ctx.restore();
+        drag.smeared = true;
+      }
+
+      function hammerHead() {
+        var rect = hammer.getBoundingClientRect();
+        return { x: rect.left + rect.width * 0.13, y: rect.top + rect.height * 0.4 };
+      }
+
+      function hitsCoal(point) {
+        if (state.broken || !coal.classList.contains("on-tray")) return false;
+        var rect = coal.getBoundingClientRect();
+        var pad = 16;
+        return point.x >= rect.left - pad && point.x <= rect.right + pad && point.y >= rect.top - pad && point.y <= rect.bottom + pad;
+      }
+
+      function overWater(x, y) {
+        if (!cup.classList.contains("on-tray")) return false;
+        var cupRect = cup.getBoundingClientRect();
+        var water = cup.querySelector(".cup-water").getBoundingClientRect();
+        var rx = water.width / 2 + 28;
+        var ry = water.height / 2 + 36;
+        var nx = (x - (water.left + water.width / 2)) / rx;
+        var ny = (y - (water.top + water.height / 2)) / ry;
+        if (nx * nx + ny * ny <= 1) return true;
+        return x >= cupRect.left + cupRect.width * 0.12 && x <= cupRect.left + cupRect.width * 0.72
+          && y >= cupRect.top + cupRect.height * 0.05 && y <= cupRect.top + cupRect.height * 0.58;
+      }
+
+      function fractures() {
+        var pieces = [];
+        var count = 5;
+        var cx = 0.5;
+        var cy = 0.48;
+        for (var i = 0; i < count; i += 1) {
+          var a0 = (i / count) * Math.PI * 2 - 0.2;
+          var a1 = ((i + 1) / count) * Math.PI * 2 + 0.08;
+          var poly = [[cx, cy]];
+          for (var s = 0; s <= 4; s += 1) {
+            var a = a0 + (a1 - a0) * (s / 4);
+            var reach = 0.86 + ((i + s) % 3) * 0.05;
+            poly.push([cx + Math.cos(a) * reach, cy + Math.sin(a) * reach * 0.9]);
+          }
+          pieces.push(poly);
+        }
+        return pieces;
+      }
+
+      function cropShard(poly) {
+        var minX = 1;
+        var minY = 1;
+        var maxX = 0;
+        var maxY = 0;
+        poly.forEach(function (p) {
+          var x = Math.max(0, Math.min(1, p[0]));
+          var y = Math.max(0, Math.min(1, p[1]));
+          if (x < minX) minX = x;
+          if (y < minY) minY = y;
+          if (x > maxX) maxX = x;
+          if (y > maxY) maxY = y;
+        });
+        var clip = "polygon(" + poly.map(function (p) {
+          return (p[0] * 100) + "% " + (p[1] * 100) + "%";
+        }).join(", ") + ")";
+        return { sx: minX, sy: minY, sw: Math.max(0.12, maxX - minX), sh: Math.max(0.12, maxY - minY), clip: clip };
+      }
+
+      function shardName(text, lang, level) {
+        var span = document.createElement("span");
+        span.className = "only " + lang + " " + level;
+        span.textContent = text;
+        return span;
+      }
+
+      function makeShard(index, part) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "tray-piece coal-shard on-tray";
+        button.dataset.shard = String(index);
+        var img = document.createElement("img");
+        img.src = coalImg.src;
+        img.alt = "";
+        img.draggable = false;
+        img.style.width = (100 / part.sw) + "%";
+        img.style.height = (100 / part.sh) + "%";
+        img.style.left = (-part.sx / part.sw * 100) + "%";
+        img.style.top = (-part.sy / part.sh * 100) + "%";
+        img.style.clipPath = part.clip;
+        button.appendChild(img);
+        var name = document.createElement("span");
+        name.className = "piece-name";
+        name.appendChild(shardName("Piece of coal", "en", "simple"));
+        name.appendChild(shardName("Piece of coal", "en", "common"));
+        name.appendChild(shardName("חתיכת פחם", "he", "simple"));
+        name.appendChild(shardName("חתיכת פחם", "he", "common"));
+        button.appendChild(name);
+        button.dataset.sx = String(part.sx);
+        button.dataset.sy = String(part.sy);
+        button.dataset.sw = String(part.sw);
+        watch(button);
+        return button;
+      }
+
+      function layShard(shard, leftPct, topPct, widthPct) {
+        board.appendChild(shard);
+        shard.classList.remove("is-floating");
+        shard.style.width = widthPct + "%";
+        shard.style.height = ((widthPct * (boardBox().width / boardBox().height)) * (Number(shard.dataset.sh) / Number(shard.dataset.sw)) * (coalImg.naturalHeight / coalImg.naturalWidth)) + "%";
+        shard.dataset.boardW = widthPct + "%";
+        shard.dataset.boardH = shard.style.height;
+        shard.style.left = leftPct + "%";
+        shard.style.top = topPct + "%";
+      }
+
+      function scatterShards(animate) {
+        var coalRect = coal.getBoundingClientRect();
+        var box = boardBox();
+        var cx = coalRect.left + coalRect.width / 2;
+        var cy = coalRect.top + coalRect.height / 2;
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        root.querySelectorAll(".coal-shard").forEach(function (shard) {
+          var sw = Number(shard.dataset.sw);
+          var sx = Number(shard.dataset.sx);
+          var sy = Number(shard.dataset.sy);
+          var widthPct = (coalRect.width * sw / box.width) * 100;
+          var startLeft = (coalRect.left - box.left + coalRect.width * sx) / box.width * 100;
+          var startTop = (coalRect.top - box.top + coalRect.height * sy) / box.height * 100;
+          var originX = coalRect.left + coalRect.width * (sx + sw / 2);
+          var originY = coalRect.top + coalRect.height * (sy + Number(shard.dataset.sh || 0.2) / 2);
+          var vx = originX - cx;
+          var vy = originY - cy;
+          var len = Math.hypot(vx, vy) || 1;
+          var push = coalRect.width * 0.16;
+          var endLeft = startLeft + ((vx / len) * push) / box.width * 100;
+          var endTop = startTop + ((vy / len) * push + coalRect.height * 0.04) / box.height * 100;
+          layShard(shard, startLeft, startTop, widthPct);
+          if (animate && !reduce) {
+            shard.classList.add("is-settling");
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                shard.style.left = endLeft + "%";
+                shard.style.top = endTop + "%";
+              });
+            });
+          } else {
+            shard.style.left = endLeft + "%";
+            shard.style.top = endTop + "%";
+          }
+        });
+      }
+
+      function puff(rect) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var box = boardBox();
+        for (var i = 0; i < 8; i += 1) {
+          var dot = document.createElement("span");
+          dot.className = "coal-dust";
+          var angle = (i / 8) * Math.PI * 2 + 0.2;
+          var dist = 16 + (i % 3) * 10;
+          dot.style.left = (rect.left + rect.width / 2 - box.left) + "px";
+          dot.style.top = (rect.top + rect.height * 0.55 - box.top) + "px";
+          dot.style.setProperty("--dx", (Math.cos(angle) * dist) + "px");
+          dot.style.setProperty("--dy", (Math.sin(angle) * dist + 8) + "px");
+          board.appendChild(dot);
+        }
+        setTimeout(function () {
+          root.querySelectorAll(".coal-dust").forEach(function (dot) { dot.remove(); });
+        }, 600);
+      }
+
+      function spawnShards(animate) {
+        if (root.querySelector(".coal-shard")) return;
+        if (!coalImg.naturalWidth) return;
+        fractures().forEach(function (poly, index) {
+          var part = cropShard(poly);
+          var shard = makeShard(index, part);
+          shard.dataset.sh = String(part.sh);
+          board.appendChild(shard);
+        });
+        scatterShards(animate);
+      }
+
+      function breakCoal() {
+        if (state.broken || !coal.classList.contains("on-tray")) return;
+        state.broken = true;
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        hammer.classList.add("is-striking");
+        coal.classList.add("is-cracking");
+        var rect = coal.getBoundingClientRect();
+        setTimeout(function () {
+          hammer.classList.remove("is-striking");
+          coal.classList.remove("is-cracking");
+          spawnShards(!reduce);
+          coal.classList.add("is-broken");
+          puff(rect);
+          snapshot();
+        }, reduce ? 0 : 300);
+      }
+
+      function floatShard(shard) {
+        var water = cup.querySelector(".cup-water");
+        var waterBox = water.getBoundingClientRect();
+        var rect = shard.getBoundingClientRect();
+        var maxW = waterBox.width * 0.4;
+        var w = Math.min(rect.width, maxW);
+        var h = rect.height * (w / rect.width);
+        var left = rect.left + rect.width / 2 - waterBox.left - w / 2;
+        var floaters = water.querySelectorAll(".coal-shard");
+        for (var i = 0; i < floaters.length; i += 1) {
+          var other = parseFloat(floaters[i].style.left) || 0;
+          if (Math.abs(other - left) < w * 0.62) left += w * 0.48;
+        }
+        left = Math.max(w * -0.08, Math.min(waterBox.width - w * 0.62, left));
+        water.appendChild(shard);
+        shard.classList.add("is-floating");
+        shard.classList.remove("is-settling");
+        shard.style.width = w + "px";
+        shard.style.height = h + "px";
+        shard.style.left = left + "px";
+        shard.style.top = (waterBox.height * 0.62 - h * 0.78) + "px";
+        if (!shard.style.getPropertyValue("--tilt")) {
+          shard.style.setProperty("--tilt", ((shard.dataset.shard % 2 === 0 ? -1 : 1) * (4 + Number(shard.dataset.shard))) + "deg");
+        }
+        shard.style.setProperty("--bob", ((-0.35 * Number(shard.dataset.shard)) || 0) + "s");
+      }
+
+      function liftShard(shard) {
+        var rect = shard.getBoundingClientRect();
+        board.appendChild(shard);
+        shard.classList.remove("is-floating");
+        shard.style.width = shard.dataset.boardW || "";
+        shard.style.height = shard.dataset.boardH || "";
+        placePx(shard, rect.left, rect.top);
+      }
+
+      function pointerDown(event) {
+        var piece = event.currentTarget;
+        if (piece.classList.contains("is-broken")) return;
+        if (event.button !== undefined && event.button !== 0) return;
+        if (piece.classList.contains("is-settling")) {
+          var box = boardBox();
+          var vis = piece.getBoundingClientRect();
+          piece.classList.remove("is-settling");
+          piece.style.left = ((vis.left - box.left) / box.width * 100) + "%";
+          piece.style.top = ((vis.top - box.top) / box.height * 100) + "%";
+        }
+        if (piece.classList.contains("is-floating")) liftShard(piece);
+        if (piece.classList.contains("on-tray")) pinHome(piece);
+        var rect = piece.getBoundingClientRect();
+        drag = {
+          piece: piece,
+          id: event.pointerId,
+          x: event.clientX,
+          y: event.clientY,
+          ox: event.clientX - rect.left,
+          oy: event.clientY - rect.top,
+          moved: false,
+          drew: false,
+          lastDraw: null,
+          lastSoil: null,
+          lastSmear: null,
+          dirtied: false,
+          smeared: false
+        };
+        try { piece.setPointerCapture(event.pointerId); } catch (error) {}
+      }
+
+      function pointerMove(event) {
+        var piece = event.currentTarget;
+        if (!drag || drag.piece !== piece || event.pointerId !== drag.id) return;
+        if (Math.abs(event.clientX - drag.x) > 8 || Math.abs(event.clientY - drag.y) > 8) drag.moved = true;
+        if (!drag.moved) return;
+        piece.classList.add("is-dragging");
+        if (piece.classList.contains("on-tray")) {
+          piece.style.transform = "";
+          placePx(piece, event.clientX - drag.ox, event.clientY - drag.oy);
+        } else {
+          piece.style.transform = "translate(" + (event.clientX - drag.x) + "px," + (event.clientY - drag.y) + "px)";
+        }
+        if (piece === coal || piece.classList.contains("coal-shard")) {
+          drawMark(piece);
+          soilTowel(piece);
+        }
+        if (piece === towel) smearDrawing(piece);
+      }
+
+      function pointerUp(event) {
+        var piece = event.currentTarget;
+        if (!drag || drag.piece !== piece || event.pointerId !== drag.id) return;
+        if (piece === coal || piece.classList.contains("coal-shard")) soilTowel(piece);
+        var moved = drag.moved;
+        var drew = drag.drew;
+        var smeared = drag.smeared;
+        var dirtied = drag.dirtied;
+        drag = null;
+        piece.classList.remove("is-dragging");
+        if (!moved) {
+          piece.style.transform = "";
+          if (dirtied) saveTowel();
+          return;
+        }
+        piece.dataset.skipClick = "1";
+        var rect = piece.getBoundingClientRect();
+        var cx = rect.left + rect.width / 2;
+        var cy = rect.top + rect.height / 2;
+        var box = boardBox();
+        var onBoard = cx >= box.left && cx <= box.right && cy >= box.top && cy <= box.bottom;
+        piece.style.transform = "";
+        if (piece.classList.contains("coal-shard")) {
+          if (overWater(cx, cy)) floatShard(piece);
+          else if (!onBoard) {
+            placePx(piece,
+              Math.min(Math.max(rect.left, box.left), box.right - rect.width),
+              Math.min(Math.max(rect.top, box.top), box.bottom - rect.height));
+          }
+        } else if (!onBoard) {
+          takeOff(piece);
+        } else if (!piece.classList.contains("on-tray")) {
+          dropOnTray(piece, rect);
+          if (piece === hammer && hitsCoal(hammerHead())) breakCoal();
+        } else if (piece === hammer && hitsCoal(hammerHead())) {
+          breakCoal();
+        }
+        if (drew || smeared) saveDrawing();
+        if (dirtied) saveTowel();
+        snapshot();
+      }
+
+      function onClick(event) {
+        var piece = event.currentTarget;
+        if (piece.dataset.skipClick === "1") {
+          delete piece.dataset.skipClick;
+          return;
+        }
+        if (piece.classList.contains("coal-shard") || piece.classList.contains("is-broken")) return;
+        if (piece.classList.contains("on-tray")) takeOff(piece);
+        else putHome(piece);
+        snapshot();
+      }
+
+      function watch(piece) {
+        piece.addEventListener("pointerdown", pointerDown);
+        piece.addEventListener("pointermove", pointerMove);
+        piece.addEventListener("pointerup", pointerUp);
+        piece.addEventListener("pointercancel", pointerUp);
+        piece.addEventListener("click", onClick);
+      }
+
+      try { localStorage.removeItem("woodToGas.tray"); } catch (error) {}
+      pieces.forEach(function (piece) {
+        putHome(piece);
+        watch(piece);
+      });
+      snapshot();
+    })();
+  </script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

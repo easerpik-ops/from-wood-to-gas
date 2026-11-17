@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">King of the fuels</span>
+        <span class="only en common">King of the fuels</span>
+        <span class="only he simple">מלך הדלקים</span>
+        <span class="only he common">מלך חומרי הדלק</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, choose the king of the fuels and two helpers.</span>
+        <span class="only en common">By the end of this page, choose the king of the fuels and two deputies.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לבחור את מלך הדלקים ושני עוזרים.</span>
+        <span class="only he common">בסוף העמוד תוכלו לבחור את מלך חומרי הדלק ושני סגנים.</span>
+      </p>
+      <p>
+        <span class="only en simple">At the computer, after you read more information, you can go on making an identity card for the fuel you chose. You can add more topics about fuels and collect facts about them. Collect the facts from this book and from other places.</span>
+        <span class="only en common">At the computer, once you have read further information, you can continue the identity card of the fuel you chose. You may add more topics about fuels and gather information on those topics. Collect the information from this book and from other sources.</span>
+        <span class="only he simple">במחשב, אחרי שקוראים עוד מידע, אפשר להמשיך להכין תעודת זהות לדלק שבחרתם. אפשר להוסיף נושאים על דלקים ולאסוף עליהם עובדות. אוספים את העובדות מהספר הזה וממקומות אחרים.</span>
+        <span class="only he common">בפינת המחשב, לאחר קריאת מידע נוסף, תוכלו להמשיך ביצירת תעודת זהות לחומר הדלק שבחרתם. תוכלו להעלות נושאים נוספים על חומרי דלק ולאסוף עליהם מידע. את המידע אוספים מתוך הספר הזה וממקורות אחרים.</span>
+      </p>
+      <div class="task">
+        <h3>
+          <span class="only en simple">A game</span>
+          <span class="only en common">A game</span>
+          <span class="only he simple">משחק</span>
+          <span class="only he common">משחק</span>
+        </h3>
+        <p>
+          <span class="only en simple">A contest will choose the king of the fuels. These materials come forward: water, wood, alcohol, oil, fat, coal, straw, wax, ash, glass, kerosene, charcoal, and cooking gas. You are a judge.</span>
+          <span class="only en common">A contest has been declared to choose the king of the fuels. These materials present themselves: water, wood, alcohol, oil, fat, coal, straw, wax, ash, glass, kerosene, charcoal, and cooking gas. You are one of the judges.</span>
+          <span class="only he simple">תחרות תבחר את מלך הדלקים. אלה החומרים שניגשים: מים, עץ, כוהל, שמן, שומן, פחם, קש, שעווה, אפר, זכוכית, קרוסין, פחם-עץ וגז בישול. אתם שופטים.</span>
+          <span class="only he common">הוכרזה תחרות לבחירת מלך חומרי הדלק. אלה החומרים שהתייצבו: מים, עץ, כוהל, שמן, שומן, פחם, קש, שעווה, אפר, זכוכית, קרוסין, פחם-עץ וגז בישול. אתם אחד השופטים.</span>
+        </p>
+        <div class="king-game">
+          <p class="king-phase" data-phase-text="out">
+            <span class="only en simple">Drag into Disqualification the pictures of the materials the judges would not allow. The name is above each picture. You can also tap a picture.</span>
+            <span class="only en common">Drag into Disqualification the pictures of any materials the judges would disqualify. Each name is written above its picture. You can also tap a picture to move it.</span>
+            <span class="only he simple">גררו אל הפסילה את התמונות של החומרים שהשופטים לא יכניסו. השם כתוב מעל כל תמונה. אפשר גם להקיש על תמונה.</span>
+            <span class="only he common">גררו אל הפסילה את התמונות של חומרים שחבר השופטים היה פוסל. השם כתוב מעל כל תמונה. אפשר גם להקיש על תמונה כדי להזיז אותה.</span>
+          </p>
+          <p class="king-phase" data-phase-text="vote" hidden>
+            <span class="only en simple">Drag one material into King. Drag two more into Helpers.</span>
+            <span class="only en common">Drag one remaining material into King. Drag two materials into Deputies.</span>
+            <span class="only he simple">גררו חומר אחד אל המלך. גררו עוד שניים אל העוזרים.</span>
+            <span class="only he common">גררו חומר אחד שנותר אל המלך. גררו שני חומרים אל הסגנים.</span>
+          </p>
+          <div class="king-board">
+            <div class="king-col">
+              <div class="king-label">
+                <span class="only en simple">Still in</span>
+                <span class="only en common">Still in the contest</span>
+                <span class="only he simple">עדיין בתחרות</span>
+                <span class="only he common">עדיין בתחרות</span>
+              </div>
+              <div class="king-cards" data-zone="in"></div>
+            </div>
+            <div class="king-col king-side">
+              <div class="king-out">
+                <div class="king-label">
+                  <span class="only en simple">Disqualification</span>
+                  <span class="only en common">Disqualification</span>
+                  <span class="only he simple">פסילה</span>
+                  <span class="only he common">פסילה</span>
+                </div>
+                <div class="king-cards" data-zone="out"></div>
+              </div>
+              <div class="king-roles" hidden>
+                <div class="king-role">
+                  <div class="king-label">
+                    <span class="only en simple">King</span>
+                    <span class="only en common">King</span>
+                    <span class="only he simple">מלך</span>
+                    <span class="only he common">מלך</span>
+                  </div>
+                  <div class="king-slot" data-slot="king"></div>
+                </div>
+                <div class="king-role">
+                  <div class="king-label">
+                    <span class="only en simple">Helpers</span>
+                    <span class="only en common">Deputies</span>
+                    <span class="only he simple">עוזרים</span>
+                    <span class="only he common">סגנים</span>
+                  </div>
+                  <div class="king-slot" data-slot="deputies"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="king-result" hidden aria-live="polite">
+            <span class="only en simple">Your king is <span data-king></span>. Your helpers are <span data-a></span> and <span data-b></span>.</span>
+            <span class="only en common">You name <span data-king></span> king of the fuels, with <span data-a></span> and <span data-b></span> as deputies.</span>
+            <span class="only he simple">המלך שלכם הוא <span data-king></span>. העוזרים הם <span data-a></span> ו<span data-b></span>.</span>
+            <span class="only he common">בחרתם במלך: <span data-king></span>. הסגנים הם <span data-a></span> ו<span data-b></span>.</span>
+          </p>
+          <div class="send-row">
+            <button type="button" class="send king-check" hidden>
+              <span class="only en simple">Check your vote</span>
+              <span class="only en common">Check your vote</span>
+              <span class="only he simple">בדקו את ההצבעה</span>
+              <span class="only he common">בדקו את ההצבעה</span>
+            </button>
+            <button type="button" class="send king-go">
+              <span class="only en simple">Go on to the vote</span>
+              <span class="only en common">Go on to the vote</span>
+              <span class="only he simple">המשיכו להצבעה</span>
+              <span class="only he common">המשיכו להצבעה</span>
+            </button>
+          </div>
+          <dialog class="access-pop king-pop">
+            <p id="king-pop-wrong" data-pop="wrong">
+              <span class="only en simple">That is wrong. Check which materials cannot burn. Try again.</span>
+              <span class="only en common">That disqualification is wrong. Check which materials cannot burn, so they are not fuels. Try again.</span>
+              <span class="only he simple">זה לא נכון. בדקו אילו חומרים לא יכולים להישרף. נסו שוב.</span>
+              <span class="only he common">הפסילה הזאת אינה נכונה. בדקו אילו חומרים אינם בעירים, ולכן אינם דלק. נסו שוב.</span>
+            </p>
+            <p id="king-pop-good" data-pop="good" hidden>
+              <span class="only en simple">Congratulations! You named the king and the two helpers.</span>
+              <span class="only en common">Congratulations. You named the king and the two deputies.</span>
+              <span class="only he simple">כל הכבוד! בחרתם נכון את המלך ואת שני העוזרים.</span>
+              <span class="only he common">כל הכבוד. בחרתם נכון את המלך ואת שני הסגנים.</span>
+            </p>
+            <p id="king-pop-hard" data-pop="hard" hidden>
+              <span class="only en simple">Think harder. The king gives the most heat. The two helpers come next.</span>
+              <span class="only en common">Think harder. The king is the fuel that gives the most heat. The two deputies come next.</span>
+              <span class="only he simple">חשבו יותר. המלך נותן הכי הרבה חום. שני העוזרים באים אחריו.</span>
+              <span class="only he common">חשבו יותר. המלך הוא הדלק שנותן הכי הרבה חום. שני הסגנים באים אחריו.</span>
+            </p>
+            <div class="send-row">
+              <button type="button" class="access-close">
+                <span class="only en simple">Close</span>
+                <span class="only en common">Close</span>
+                <span class="only he simple">סגור</span>
+                <span class="only he common">סגור</span>
+              </button>
+            </div>
+          </dialog>
+        </div>
+      </div>
+      <figure>
+        <img src="../images/fuel-cards.jpg" alt="Blank cards on a table with wood, coal, a candle, straw, and a jar of oil." data-i18n-alt="cardsAlt">
+        <figcaption>
+          <span class="only en simple">Blank cards for the contest, with a few of the materials.</span>
+          <span class="only en common">Calling cards for the contest, beside a few of the materials.</span>
+          <span class="only he simple">כרטיסים ריקים לתחרות, ועם כמה מן החומרים.</span>
+          <span class="only he common">כרטיסי ביקור לתחרות, לצד כמה מן החומרים.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector(".king-game");
+      if (!root) return;
+      var zoneIn = root.querySelector('[data-zone="in"]');
+      var zoneOut = root.querySelector('[data-zone="out"]');
+      var outBox = root.querySelector(".king-out");
+      var roles = root.querySelector(".king-roles");
+      var result = root.querySelector(".king-result");
+      var go = root.querySelector(".king-go");
+      var check = root.querySelector(".king-check");
+      var pop = root.querySelector(".king-pop");
+      var correctOut = { water: true, ash: true, glass: true };
+      // Cooking gas gives the most heat. Coal and kerosene are the other two important fuels.
+      var correctKing = "gas";
+      var correctHelp = { coal: true, kerosene: true };
+      var slots = {
+        king: root.querySelector('[data-slot="king"]'),
+        deputies: root.querySelector('[data-slot="deputies"]')
+      };
+      var phase = "out";
+      var drag = null;
+      var materials = [
+        ["water", "Water", "מים"],
+        ["wood", "Wood", "עץ"],
+        ["alcohol", "Alcohol", "כוהל"],
+        ["oil", "Oil", "שמן"],
+        ["fat", "Fat", "שומן"],
+        ["coal", "Coal", "פחם"],
+        ["straw", "Straw", "קש"],
+        ["wax", "Wax", "שעווה"],
+        ["ash", "Ash", "אפר"],
+        ["glass", "Glass", "זכוכית"],
+        ["kerosene", "Kerosene", "קרוסין"],
+        ["charcoal", "Charcoal", "פחם-עץ"],
+        ["gas", "Cooking gas", "גז בישול"]
+      ];
+
+      function makeCard(item) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "king-card";
+        button.setAttribute("data-card", item[0]);
+        var name = document.createElement("span");
+        name.className = "king-name";
+        ["simple", "common"].forEach(function (level) {
+          var en = document.createElement("span");
+          en.className = "only en " + level;
+          en.textContent = item[1];
+          name.appendChild(en);
+          var he = document.createElement("span");
+          he.className = "only he " + level;
+          he.textContent = item[2];
+          name.appendChild(he);
+        });
+        button.appendChild(name);
+        var img = document.createElement("img");
+        img.src = "../images/king-" + item[0] + ".jpg";
+        img.alt = "";
+        img.draggable = false;
+        button.appendChild(img);
+        return button;
+      }
+
+      var cards = materials.map(makeCard);
+
+      function idsIn(parent) {
+        return [].map.call(parent.querySelectorAll(":scope > .king-card"), function (card) {
+          return card.getAttribute("data-card");
+        });
+      }
+
+      function outIsRight() {
+        var ids = idsIn(zoneOut);
+        if (ids.length !== 3) return false;
+        for (var i = 0; i < ids.length; i += 1) {
+          if (!correctOut[ids[i]]) return false;
+        }
+        return true;
+      }
+
+      function cardName(card, lang) {
+        var span = card.querySelector(".only." + lang);
+        return span ? span.textContent : "";
+      }
+
+      function sentence(lang, level, king, a, b) {
+        if (lang === "he" && level === "simple") return "המלך שלכם הוא " + king + ". העוזרים הם " + a + " ו" + b + ".";
+        if (lang === "he") return "בחרתם במלך: " + king + ". הסגנים הם " + a + " ו" + b + ".";
+        if (level === "common") return "You name " + king + " king of the fuels, with " + a + " and " + b + " as deputies.";
+        return "Your king is " + king + ". Your helpers are " + a + " and " + b + ".";
+      }
+
+      function helperCards() {
+        return [].slice.call(slots.deputies.querySelectorAll(":scope > .king-card"));
+      }
+
+      function fillResult() {
+        var kingCard = slots.king.querySelector(":scope > .king-card");
+        var helpers = helperCards();
+        var full = !!(kingCard && helpers.length === 2);
+        if (!full) {
+          result.hidden = true;
+          return;
+        }
+        var aCard = helpers[0];
+        var bCard = helpers[1];
+        ["en", "he"].forEach(function (lang) {
+          ["simple", "common"].forEach(function (level) {
+            var node = result.querySelector(".only." + lang + "." + level);
+            if (!node) return;
+            var text = sentence(lang, level, cardName(kingCard, lang), cardName(aCard, lang), cardName(bCard, lang));
+            var say = node.querySelector(":scope > .say");
+            if (say) say.textContent = text;
+            else node.textContent = text;
+          });
+        });
+        result.hidden = false;
+      }
+
+      function showPhase(next) {
+        phase = next;
+        var voting = phase === "vote";
+        root.classList.toggle("is-vote", voting);
+        root.querySelectorAll("[data-phase-text]").forEach(function (node) {
+          node.hidden = node.getAttribute("data-phase-text") !== phase;
+        });
+        outBox.hidden = voting;
+        roles.hidden = !voting;
+        go.hidden = voting;
+        check.hidden = !voting;
+        if (voting) fillResult();
+        else result.hidden = true;
+      }
+
+      function openPop(kind) {
+        var shown = null;
+        pop.querySelectorAll("[data-pop]").forEach(function (node) {
+          var on = node.getAttribute("data-pop") === kind;
+          node.hidden = !on;
+          if (on) shown = node;
+        });
+        if (shown) pop.setAttribute("aria-labelledby", shown.id);
+        if (!pop.open) pop.showModal();
+      }
+
+      function voteIsRight() {
+        var kingCard = slots.king.querySelector(":scope > .king-card");
+        var helpers = helperCards();
+        if (!kingCard || helpers.length !== 2) return false;
+        if (kingCard.getAttribute("data-card") !== correctKing) return false;
+        var help = {};
+        help[helpers[0].getAttribute("data-card")] = true;
+        help[helpers[1].getAttribute("data-card")] = true;
+        var names = Object.keys(correctHelp);
+        if (Object.keys(help).length !== names.length) return false;
+        for (var n = 0; n < names.length; n += 1) {
+          if (!help[names[n]]) return false;
+        }
+        return true;
+      }
+
+      function containsPoint(box, x, y) {
+        return x >= box.left && x <= box.right && y >= box.top && y <= box.bottom;
+      }
+
+      function zoneAt(x, y) {
+        if (phase === "vote") {
+          if (containsPoint(slots.king.getBoundingClientRect(), x, y)) return slots.king;
+          if (containsPoint(slots.deputies.getBoundingClientRect(), x, y)) return slots.deputies;
+          if (containsPoint(zoneIn.getBoundingClientRect(), x, y)) return zoneIn;
+          return null;
+        }
+        if (containsPoint(zoneOut.getBoundingClientRect(), x, y)) return zoneOut;
+        if (containsPoint(zoneIn.getBoundingClientRect(), x, y)) return zoneIn;
+        return null;
+      }
+
+      function moveCard(card, parent) {
+        if (card.parentElement !== parent) parent.appendChild(card);
+      }
+
+      function placeCard(card, zone) {
+        if (zone === slots.king) {
+          var sitting = zone.querySelector(":scope > .king-card");
+          if (sitting && sitting !== card) zoneIn.appendChild(sitting);
+        }
+        if (zone === slots.deputies && card.parentElement !== zone && helperCards().length >= 2) return;
+        moveCard(card, zone);
+      }
+
+      function onClick(card) {
+        if (card.dataset.skipClick === "1") {
+          delete card.dataset.skipClick;
+          return;
+        }
+        if (phase === "out") {
+          moveCard(card, card.parentElement === zoneOut ? zoneIn : zoneOut);
+          return;
+        }
+        if (card.parentElement === slots.king || card.parentElement === slots.deputies) {
+          moveCard(card, zoneIn);
+          fillResult();
+        }
+      }
+
+      function endDrag(card, event) {
+        if (!drag || drag.card !== card || event.pointerId !== drag.id) return;
+        var moved = drag.moved;
+        var x = event.clientX;
+        var y = event.clientY;
+        drag = null;
+        card.classList.remove("is-dragging");
+        card.style.transform = "";
+        if (!moved) return;
+        card.dataset.skipClick = "1";
+        var zone = zoneAt(x, y);
+        if (!zone || zone === card.parentElement) return;
+        if (zone === slots.king || zone === slots.deputies) placeCard(card, zone);
+        else moveCard(card, zone);
+        if (phase === "vote") fillResult();
+      }
+
+      cards.forEach(function (card) {
+        card.addEventListener("pointerdown", function (event) {
+          if (event.button !== undefined && event.button !== 0) return;
+          var rect = card.getBoundingClientRect();
+          drag = {
+            card: card,
+            id: event.pointerId,
+            x: event.clientX,
+            y: event.clientY,
+            moved: false
+          };
+          try { card.setPointerCapture(event.pointerId); } catch (error) {}
+        });
+        card.addEventListener("pointermove", function (event) {
+          if (!drag || drag.card !== card || event.pointerId !== drag.id) return;
+          var dx = event.clientX - drag.x;
+          var dy = event.clientY - drag.y;
+          if (Math.abs(dx) > 8 || Math.abs(dy) > 8) drag.moved = true;
+          if (!drag.moved) return;
+          card.style.transform = "translate(" + dx + "px, " + dy + "px)";
+          card.classList.add("is-dragging");
+        });
+        card.addEventListener("pointerup", function (event) { endDrag(card, event); });
+        card.addEventListener("pointercancel", function (event) { endDrag(card, event); });
+        card.addEventListener("lostpointercapture", function (event) { endDrag(card, event); });
+        card.addEventListener("click", function () { onClick(card); });
+      });
+
+      go.addEventListener("click", function () {
+        if (!outIsRight()) {
+          openPop("wrong");
+          return;
+        }
+        showPhase("vote");
+      });
+      var leaveTimer = 0;
+      var leaving = false;
+      var resetting = false;
+
+      function goToLast() {
+        if (leaving || resetting) return;
+        leaving = true;
+        if (leaveTimer) {
+          window.clearTimeout(leaveTimer);
+          leaveTimer = 0;
+        }
+        if (pop.open) pop.close();
+        var next = document.querySelector(".turn.next");
+        if (next) next.click();
+      }
+
+      check.addEventListener("click", function () {
+        if (helperCards().length !== 2 || !slots.king.querySelector(":scope > .king-card")) return;
+        var right = voteIsRight();
+        openPop(right ? "good" : "hard");
+        if (!right) return;
+        if (leaveTimer) window.clearTimeout(leaveTimer);
+        leaveTimer = window.setTimeout(goToLast, 2200);
+      });
+      pop.querySelector(".access-close").addEventListener("click", function () {
+        pop.close();
+      });
+      pop.addEventListener("click", function (event) {
+        if (event.target === pop) pop.close();
+      });
+      pop.addEventListener("close", function () {
+        if (resetting) return;
+        var shown = pop.querySelector("[data-pop]:not([hidden])");
+        if (!shown || shown.getAttribute("data-pop") !== "good") return;
+        goToLast();
+      });
+
+      function clearBoard() {
+        resetting = true;
+        if (leaveTimer) {
+          window.clearTimeout(leaveTimer);
+          leaveTimer = 0;
+        }
+        try { localStorage.removeItem("woodToGas.king"); } catch (error) {}
+        [slots.king, slots.deputies].forEach(function (zone) {
+          [].slice.call(zone.querySelectorAll(":scope > .king-card")).forEach(function (placed) {
+            zoneIn.appendChild(placed);
+          });
+        });
+        cards.forEach(function (card) {
+          if (card.parentElement !== zoneIn) zoneIn.appendChild(card);
+        });
+        if (pop.open) pop.close();
+        showPhase("out");
+        leaving = false;
+        resetting = false;
+      }
+
+      try { localStorage.removeItem("woodToGas.king"); } catch (error) {}
+      for (var i = cards.length - 1; i > 0; i -= 1) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var swap = cards[i];
+        cards[i] = cards[j];
+        cards[j] = swap;
+      }
+      cards.forEach(function (card) { zoneIn.appendChild(card); });
+      showPhase("out");
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted) clearBoard();
+      });
+    })();
+  </script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

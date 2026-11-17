@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Coal instead of wood</span>
+        <span class="only en common">Coal takes the place of wood</span>
+        <span class="only he simple">פחם במקום עץ</span>
+        <span class="only he common">הפחם תופס את מקום העץ</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say why people started to burn coal.</span>
+        <span class="only en common">By the end of this page, explain why coal took the place of wood.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר למה התחילו לשרוף פחם.</span>
+        <span class="only he common">בסוף העמוד תוכלו להסביר מדוע הפחם תפס את מקום העץ.</span>
+      </p>
+      <p>
+        <span class="only en simple">About 200 years ago, people started to burn coal. Coal ran the machines in factories. It also ran trains and steam ships.</span>
+        <span class="only en common">About two hundred years ago, people began to use coal to run the machines in factories and to move trains and steamships.</span>
+        <span class="only he simple">לפני כמאתיים שנה התחילו לשרוף פחם. הפחם הפעיל מכונות בבתי חרושת, וגם רכבות וספינות קיטור.</span>
+        <span class="only he common">לפני כמאתיים שנה החלו להשתמש בפחם כדי להפעיל מכונות בבתי החרושת, וכדי להניע רכבות וספינות קיטור.</span>
+      </p>
+      <figure>
+        <img src="../images/coal-mine.jpg" alt="A coal mine with a tall tower, a smoking chimney, and carts full of coal." data-i18n-alt="coalAlt">
+        <figcaption>
+          <span class="only en simple">Coal comes up from under the ground in small carts.</span>
+          <span class="only en common">At a coal mine, carts carry the coal that has been brought up from underground.</span>
+          <span class="only he simple">פחם עולה מן האדמה בעגלות קטנות.</span>
+          <span class="only he common">במכרה פחם, קרונות מובילים את הפחם שהעלו מתוך האדמה.</span>
+        </figcaption>
+      </figure>
+      <p>
+        <span class="only en simple">Coal is a rock. People also call it stone coal. There is a huge amount of it under the ground. People knew about coal for thousands of years, and some of them burned it to keep warm. Without machines, it was very hard to dig the coal out.</span>
+        <span class="only en common">Coal is a kind of rock, so it is sometimes called stone coal. Enormous amounts of it lie underground. People had known coal for thousands of years, and in some places they already burned it for heat. Until there were machines, it was hard to bring the coal up out of the ground.</span>
+        <span class="only he simple">פחם הוא סלע. קוראים לו גם פחם-אבן. יש ממנו המון מתחת לאדמה. אנשים הכירו את הפחם אלפי שנים, ובמקומות אחדים כבר שרפו אותו לחימום. בלי מכונות היה קשה מאוד להוציא את הפחם מהאדמה.</span>
+        <span class="only he common">הפחם הוא סלע, ולכן קוראים לו לפעמים פחם-אבן. הוא מצוי באדמה בכמויות עצומות. בני האדם הכירו את הפחם זה אלפי שנים, ובמקומות אחדים כבר השתמשו בו לחימום. כל עוד לא היו מכונות, היה קשה להעלות את הפחם מתוך האדמה.</span>
+      </p>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

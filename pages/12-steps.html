@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Oil, step by step</span>
+        <span class="only en common">The steps that make oil</span>
+        <span class="only he simple">הנפט צעד אחר צעד</span>
+        <span class="only he common">השלבים שבהם נוצר הנפט</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, put the steps that make oil in order.</span>
+        <span class="only en common">By the end of this page, order the steps by which crude oil forms.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לסדר את הצעדים שבהם נוצר הנפט.</span>
+        <span class="only he common">בסוף העמוד תוכלו לסדר לפי הסדר את השלבים שבהם נוצר הנפט הגולמי.</span>
+      </p>
+      <p>
+        <span class="only en simple">Oil did not appear all at once. It formed slowly, in three steps.</span>
+        <span class="only en common">Crude oil did not appear in a moment. It formed slowly, in three steps under the sea.</span>
+        <span class="only he simple">הנפט לא הופיע בבת אחת. הוא נוצר לאט, בשלושה צעדים.</span>
+        <span class="only he common">הנפט הגולמי לא הופיע ברגע אחד. הוא נוצר לאט, בשלושה שלבים מתחת לים.</span>
+      </p>
+      <figure>
+        <img src="../images/sea-sink.jpg" alt="Tiny sea creatures drift in blue water and settle on the sea floor." data-i18n-alt="sinkAlt">
+        <figcaption>
+          <span class="only en simple">1. Sea creatures that lived a very long time ago died and sank to the bottom of the sea.</span>
+          <span class="only en common">1. Creatures that lived in the sea a very long time ago died, and they sank down to the sea floor.</span>
+          <span class="only he simple">1. יצורים שחיו בים לפני המון שנים מתו ושקעו לקרקעית.</span>
+          <span class="only he common">1. יצורים שחיו בים לפני שנים רבות מאוד מתו, ושקעו אל קרקעית הים.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="../images/sea-mud.jpg" alt="Layers of mud and sand cover a dark band of old sea remains." data-i18n-alt="mudAlt">
+        <figcaption>
+          <span class="only en simple">2. Over many years, a lot of mud piled on top of them. Air could not reach them, and they changed.</span>
+          <span class="only en common">2. For years, thick mud built up over them. No air could reach them, so they changed.</span>
+          <span class="only he simple">2. במשך שנים נערם עליהם הרבה בוץ. אוויר לא הגיע אליהם, והם השתנו.</span>
+          <span class="only he common">2. במשך שנים רבות נערם עליהם בוץ רב. אוויר לא הגיע אליהם, ולכן הם השתנו.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="../images/oil-well.jpg" alt="A wooden oil tower drills down through folded rock to a pool of black oil." data-i18n-alt="wellAlt">
+        <figcaption>
+          <span class="only en simple">3. After a very long time, heat and heavy pressure turned what was left of them into a thick black liquid. That is crude oil.</span>
+          <span class="only en common">3. After a great many years, high heat and strong pressure turned those remains into a thick black liquid: crude oil.</span>
+          <span class="only he simple">3. אחרי המון שנים, חום ולחץ חזק הפכו את מה שנשאר מהם לנוזל שחור וסמיך. זה הנפט הגולמי.</span>
+          <span class="only he common">3. כעבור שנים רבות מאוד, חום גבוה ולחץ כבד הפכו את שרידי היצורים לנוזל שחור וסמיך: הנפט הגולמי.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

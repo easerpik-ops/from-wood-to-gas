@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="images/favicon.svg">
+  <link rel="stylesheet" href="book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <header class="cover">
+      <div class="mark-fire">
+        <img class="mark mark-base" src="images/mark-base.png" alt="A wooden log with a small flame and a blue wisp, and green leaves.">
+        <img class="mark-flame" src="images/mark-flame.png" alt="" aria-hidden="true">
+        <img class="mark-smoke" src="images/mark-smoke.png" alt="" aria-hidden="true">
+      </div>
+      <img class="mark mark-quiet" src="images/mark.jpg" alt="A wooden log with a small flame and a blue wisp, and green leaves.">
+      <audio class="hearth-sound" src="images/tent-fire.wav" loop preload="auto" aria-hidden="true"></audio>
+      <p class="kicker" data-i18n="kicker">A digital book</p>
+      <h1 data-i18n="title">From Wood to Gas</h1>
+      <p class="audience" data-i18n="audience">For grades 3 and 4</p>
+    </header>
+  </main>
+  <script src="book.js"></script>
+  <script>
+    (function () {
+      if (location.search.indexOf("preview=1") !== -1) return;
+      var audio = document.querySelector(".hearth-sound");
+      if (!audio) return;
+      function level() {
+        var talking = window.speechSynthesis && speechSynthesis.speaking;
+        audio.volume = talking ? 0.02 : 0.12;
+      }
+      function start() {
+        level();
+        var play = audio.play();
+        if (play && play.catch) play.catch(function () {});
+      }
+      setInterval(level, 400);
+      start();
+      document.addEventListener("pointerdown", function once() {
+        start();
+        document.removeEventListener("pointerdown", once);
+      });
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) audio.pause();
+        else start();
+      });
+    })();
+  </script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

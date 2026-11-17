@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">What we have learned</span>
+        <span class="only en common">A summary</span>
+        <span class="only he simple">מה למדנו</span>
+        <span class="only he common">סיכום</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say the big ideas of this book.</span>
+        <span class="only en common">By the end of this page, state the main ideas this book has taught.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר את הרעיונות הגדולים של הספר.</span>
+        <span class="only he common">בסוף העמוד תוכלו לנסח את הרעיונות העיקריים שלימד הספר.</span>
+      </p>
+      <p>
+        <span class="only en simple">Smoke, soot, and ash from burning fuels are a nuisance. They dirty the world around us. But we do need fuels to run the machines and cars that make life comfortable. We should try to use fuels so that the smoke, soot, and ash bother us as little as possible. Factories can be built far from towns. Power stations and factories that are already standing can have tall chimneys, which carry the smoke away. Filters can be put on chimneys and on car exhausts, so that poisonous materials do not go into the air.</span>
+        <span class="only en common">The smoke, soot, and ash that come from burning fuels are an environmental nuisance. They dirty our surroundings. Yet we need fuels to run the machines and cars that make life more comfortable. We should try to use fuels so that the smoke, soot, and ash disturb us as little as they can. Factories can be built in places far from where people live. Power stations and factories that already exist can be given tall chimneys, which carry the smoke farther away. Filters can be fitted to chimneys and to car exhausts, to keep poisonous materials out of the air.</span>
+        <span class="only he simple">העשן, הפיח והאפר משריפת דלקים מפריעים. הם מלכלכים את הסביבה. אבל אנחנו צריכים דלקים כדי להפעיל מכונות ומכוניות, והן עושות את החיים נוחים יותר. כדאי להשתמש בדלקים כך שהעשן, הפיח והאפר יפריעו כמה שפחות. אפשר לבנות בתי חרושת רחוק מהיישובים. בתחנות כוח ובבתי חרושת שכבר עומדים אפשר לשים ארובות גבוהות, שמרחיקות את העשן. אפשר לשים מסננים על הארובות ועל צינורות הפליטה של המכוניות, כדי שחומרים רעילים לא ייצאו לאוויר.</span>
+        <span class="only he common">העשן, הפיח והאפר משריפת חומרי דלק הם מטרד לסביבה. הם מלכלכים אותה. ובכל זאת אנו זקוקים לדלקים כדי להפעיל את המכונות ואת המכוניות, שעושות את חיינו נוחים יותר. עלינו להשתדל להשתמש בדלקים כך שהעשן, הפיח והאפר יפריעו מעט ככל האפשר. אפשר לבנות בתי חרושת באזורים רחוקים מיישובים. בתחנות כוח ובבתי חרושת שכבר קיימים אפשר להתקין ארובות גבוהות, המרחיקות את העשן. אפשר להתקין מסננים על הארובות ועל פתחי הפליטה של המכוניות, כדי שחומרים רעילים לא יגיעו לאוויר.</span>
+      </p>
+      <div class="task">
+        <h3>
+          <span class="only en simple">Remember</span>
+          <span class="only en common">Summary</span>
+          <span class="only he simple">לזכור</span>
+          <span class="only he common">סיכום</span>
+        </h3>
+        <p>
+          <span class="only en simple">1. The fuels people choose have changed from place to place, and from one time to another.</span>
+          <span class="only en common">1. The materials chosen as fuels have changed in different places over the generations.</span>
+          <span class="only he simple">1. בחירת הדלקים השתנתה ממקום למקום ובמשך הזמן.</span>
+          <span class="only he common">1. בחירת החומרים שמשמשים כדלק השתנתה במקומות שונים במשך הדורות.</span>
+        </p>
+        <p>
+          <span class="only en simple">2. In the past, wood was the most important fuel.</span>
+          <span class="only en common">2. In the past, wood was the most important fuel.</span>
+          <span class="only he simple">2. בעבר העץ היה הדלק החשוב ביותר.</span>
+          <span class="only he common">2. בעבר היה העץ חומר הדלק החשוב ביותר.</span>
+        </p>
+        <p>
+          <span class="only en simple">3. Today the most important fuels are coal, oil, and cooking gas.</span>
+          <span class="only en common">3. Today the most important fuels are coal, oil, and cooking gas.</span>
+          <span class="only he simple">3. היום הדלקים החשובים ביותר הם פחם, נפט וגז בישול.</span>
+          <span class="only he common">3. בימינו חומרי הדלק החשובים ביותר הם הפחם, הנפט וגז הבישול.</span>
+        </p>
+        <p>
+          <span class="only en simple">4. A good fuel burns, is found nearby or is easy to get, and gives a lot of heat.</span>
+          <span class="only en common">4. The materials chosen as fuels are ones that burn, that are found around us or are easy to obtain, and that give a lot of heat as they burn.</span>
+          <span class="only he simple">4. דלק טוב הוא חומר שנשרף, שנמצא קרוב או שקל להשיג אותו, ושהוא נותן הרבה חום.</span>
+          <span class="only he common">4. החומרים שנבחרים לדלק הם חומרים בעירים, שנמצאים בסביבה או שקל להשיג אותם, והם נותנים הרבה חום בזמן השריפה.</span>
+        </p>
+        <p>
+          <span class="only en simple">5. Fuels make our lives more comfortable.</span>
+          <span class="only en common">5. Our lives become more comfortable because we use fuels.</span>
+          <span class="only he simple">5. הדלקים עושים את החיים נוחים יותר.</span>
+          <span class="only he common">5. חיינו נעשים נוחים יותר בזכות השימוש בחומרי דלק.</span>
+        </p>
+        <p>
+          <span class="only en simple">6. Burning fuels usually makes smoke, soot, and ash too. They dirty the air and the ground. They are a nuisance.</span>
+          <span class="only en common">6. When fuels burn, smoke, soot, and ash are usually formed as well. They dirty the air and the ground, and they are an environmental nuisance.</span>
+          <span class="only he simple">6. כששורפים דלק נוצרים לרוב גם עשן, פיח ואפר. הם מלכלכים את האוויר ואת האדמה. הם מטרד.</span>
+          <span class="only he common">6. כששורפים חומרי דלק נוצרים לרוב גם עשן, פיח ואפר. הם מלכלכים את האוויר ואת האדמה, והם מטרד לסביבה.</span>
+        </p>
+        <p>
+          <span class="only en simple">7. If we want to keep using fuels, we must notice the problems they cause. We should try not to dirty the air we breathe or the ground we live on.</span>
+          <span class="only en common">7. If we are to go on using the fuels that make life comfortable, we must stay aware of the problems they cause for the environment. We should try not to dirty the air we breathe or the ground we live on.</span>
+          <span class="only he simple">7. כדי להמשיך להשתמש בדלקים, צריך לשים לב לבעיות שהם יוצרים. צריך להשתדל לא ללכלך את האוויר שאנחנו נושמים ואת האדמה שאנחנו חיים עליה.</span>
+          <span class="only he common">7. כדי שנוכל להמשיך להשתמש בחומרי הדלק שתורמים לנוחות חיינו, עלינו להיות ערים לבעיות הסביבה. עלינו להשתדל לא ללכלך את האוויר שאנו נושמים ואת האדמה שאנו חיים עליה.</span>
+        </p>
+      </div>
+      <div class="task">
+        <h3>
+          <span class="only en simple">Your turn</span>
+          <span class="only en common">Your turn</span>
+          <span class="only he simple">תורכם</span>
+          <span class="only he common">תורכם</span>
+        </h3>
+        <p>
+          <span class="only en simple">What do you want to remember from this book?</span>
+          <span class="only en common">What do you most want to remember from this book?</span>
+          <span class="only he simple">מה אתם רוצים לזכור מהספר הזה?</span>
+          <span class="only he common">מה אתם רוצים לזכור יותר מכול מהספר הזה?</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write what you want to remember.</span>
+          <span class="sr only en common">Write what you want to remember.</span>
+          <span class="sr only he simple">כתבו מה אתם רוצים לזכור.</span>
+          <span class="sr only he common">כתבו מה אתם רוצים לזכור.</span>
+          <input id="summary-remember" class="note" type="text" data-note="summary-remember">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="summary-remember" data-i18n="send">Send</button>
+        </div>
+        <p>
+          <span class="only en simple">What question will you ask at home?</span>
+          <span class="only en common">What question will you ask someone at home?</span>
+          <span class="only he simple">איזו שאלה תשאלו בבית?</span>
+          <span class="only he common">איזו שאלה תשאלו מישהו בבית?</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write a question to ask at home.</span>
+          <span class="sr only en common">Write a question to ask at home.</span>
+          <span class="sr only he simple">כתבו שאלה לבית.</span>
+          <span class="sr only he common">כתבו שאלה לשאול בבית.</span>
+          <input id="summary-ask" class="note" type="text" data-note="summary-ask">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="summary-ask" data-i18n="send">Send</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

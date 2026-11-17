@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">The king sits down</span>
+        <span class="only en common">Cooking gas is king</span>
+        <span class="only he simple">המלך יושב</span>
+        <span class="only he common">גז הבישול הוא המלך</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, name the king and the two helpers.</span>
+        <span class="only en common">By the end of this page, name the king and the two deputies.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר מי המלך ומי שני העוזרים.</span>
+        <span class="only he common">בסוף העמוד תוכלו לומר מי המלך ומי שני הסגנים.</span>
+      </p>
+      <p>
+        <span class="only en simple">Cooking gas sits on the throne, and the crown is on its blue flame. Coal stands on one side. Kerosene stands on the other.</span>
+        <span class="only en common">Cooking gas sits on the throne as king, with the crown above its blue flame. Coal and kerosene stand as deputies, one on each side.</span>
+        <span class="only he simple">גז בישול יושב על הכיסא, והכתר על הלהבה הכחולה. פחם עומד מצד אחד. קרוסין עומד מצד שני.</span>
+        <span class="only he common">גז הבישול יושב על הכיסא כמלך, והכתר מעל להבתו הכחולה. הפחם והקרוסין עומדים כסגנים, אחד מכל צד.</span>
+      </p>
+      <figure>
+        <img src="../images/fuel-throne.jpg" alt="A blue cooking-gas flame sits on a purple throne under a striped canopy, with a gold crown above the flame, a lump of coal on the left, and a kerosene lamp on the right." data-i18n-alt="throneAlt">
+        <figcaption>
+          <span class="only en simple">Cooking gas wears the crown. Coal and a kerosene lamp stand beside the throne.</span>
+          <span class="only en common">The crowned cooking-gas flame sits on the throne, with coal and a kerosene lamp on either side.</span>
+          <span class="only he simple">גז בישול עם הכתר. פחם ומנורת קרוסין עומדים ליד הכיסא.</span>
+          <span class="only he common">להבת גז הבישול יושבת על הכיסא עם הכתר, ופחם ומנורת קרוסין משני הצדדים.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

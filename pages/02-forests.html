@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">The forests disappear</span>
+        <span class="only en common">Machines and the lost forests</span>
+        <span class="only he simple">היערות נעלמים</span>
+        <span class="only he common">המכונות והיערות שנעלמו</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say why the forests disappeared.</span>
+        <span class="only en common">By the end of this page, explain why so many forests were cut down.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר למה היערות נעלמו.</span>
+        <span class="only he common">בסוף העמוד תוכלו להסביר מדוע נכרתו יערות רבים.</span>
+      </p>
+      <div class="task">
+        <h3>
+          <span class="only en simple">A task</span>
+          <span class="only en common">A task</span>
+          <span class="only he simple">משימה</span>
+          <span class="only he common">משימה</span>
+        </h3>
+        <p>
+          <span class="only en simple">Ask your neighbors: Do you use wood for cooking and heating? Why? Write their answers in a notebook.</span>
+          <span class="only en common">Ask your neighbors whether they use wood for cooking and for heating, and why. Write the answers in a notebook.</span>
+          <span class="only he simple">שאלו שכנים: אתם מבשלים או מחממים עם עץ? למה? כתבו את התשובות במחברת.</span>
+          <span class="only he common">שאלו כמה שכנים אם הם משתמשים בעץ כדי לבשל ולחמם את הבית, ומדוע. כתבו במחברת מה ענו.</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write the answers here.</span>
+          <span class="sr only en common">Write the answers here.</span>
+          <span class="sr only he simple">כתבו כאן את התשובות.</span>
+          <span class="sr only he common">כתבו כאן את התשובות.</span>
+          <input id="forest-note" class="note" type="text" data-note="forests">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="forests" data-i18n="send">Send</button>
+        </div>
+      </div>
+      <p>
+        <span class="only en simple">When people used wood only to cook and to heat, they needed a little wood. About 200 years ago, people made machines with engines. The machines needed a lot of fuel, so people burned a huge amount of wood.</span>
+        <span class="only en common">While people used trees only for heating and cooking, they needed a small amount of wood. About two hundred years ago they invented machines with engines. Those machines needed a great deal of fuel, so enormous amounts of wood were burned.</span>
+        <span class="only he simple">כשהשתמשו בעץ רק לבישול ולחימום, לקחו מעט עצים. לפני כמאתיים שנה באו מכונות עם מנועים. בשביל המכונות שרפו המון עצים.</span>
+        <span class="only he common">כל זמן שבני האדם השתמשו בעצים רק לחימום ולבישול, הם נזקקו לכמות קטנה. לפני כמאתיים שנה המציאו מכונות עם מנועים. כדי להפעיל אותן נשרפו כמויות עצומות של עצים.</span>
+      </p>
+      <p>
+        <span class="only en simple">About 100 years ago this land had many forests. Wood was burned to run the train from Jaffa to Jerusalem. The forests did not grow back.</span>
+        <span class="only en common">This country also had many forests until about one hundred years ago. During Turkish rule, a very large amount of wood was burned to run the railway, mainly the line between Jaffa and Jerusalem. The forests were destroyed and did not grow again.</span>
+        <span class="only he simple">לפני כמאה שנים היו בארץ הרבה יערות. עצים הפעילו את הרכבת מיפו לירושלים. היערות לא צמחו שוב.</span>
+        <span class="only he common">גם בארץ היו יערות רבים עד לפני כמאה שנים. בימי השלטון התורכי שרפו עצים רבים כדי להפעיל את הרכבת, בעיקר בין יפו לירושלים. היערות הושמדו ולא צמחו מחדש.</span>
+      </p>
+      <figure>
+        <img class="frame-low" src="../images/forest-1.jpg" alt="A full forest and a child carrying a small bundle of sticks." data-i18n-alt="f1Alt">
+        <figcaption>
+          <span class="only en simple">1. A forest. People take a little wood.</span>
+          <span class="only en common">1. The forest is still full, and only a little wood is taken.</span>
+          <span class="only he simple">1. יער מלא. לוקחים מעט עצים.</span>
+          <span class="only he common">1. היער עדיין מלא, ולוקחים ממנו מעט עצים.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img class="frame-mid" src="../images/forest-2.jpg" alt="Tree stumps in the grass, with one factory behind the cabin." data-i18n-alt="f2Alt">
+        <figcaption>
+          <span class="only en simple">2. Trees are cut. A factory starts to work.</span>
+          <span class="only en common">2. Many trees are cut down, and a factory begins to burn fuel.</span>
+          <span class="only he simple">2. כורתים עצים. מפעל מתחיל לעבוד.</span>
+          <span class="only he common">2. עצים רבים נכרתים, ומפעל מתחיל לפעול.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img class="frame-low" src="../images/forest-3.jpg" alt="Factories and smoke where the forest used to be." data-i18n-alt="f3Alt">
+        <figcaption>
+          <span class="only en simple">3. The forest is gone. Factories burn a lot of wood.</span>
+          <span class="only en common">3. The forest has disappeared. Factories burn huge amounts of wood.</span>
+          <span class="only he simple">3. היער נעלם. המפעלים שורפים הרבה עצים.</span>
+          <span class="only he common">3. היער נעלם, והמפעלים שורפים כמויות גדולות של עצים.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

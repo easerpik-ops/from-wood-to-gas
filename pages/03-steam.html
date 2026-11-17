@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Steam and new fuels</span>
+        <span class="only en common">Steam machines and new fuels</span>
+        <span class="only he simple">קיטור ודלקים חדשים</span>
+        <span class="only he common">מכונות הקיטור ודלקים חדשים</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, name the new fuels that came after wood.</span>
+        <span class="only en common">By the end of this page, name the fuels that took the place of wood.</span>
+        <span class="only he simple">בסוף העמוד תוכלו למנות את הדלקים החדשים שבאו אחרי העץ.</span>
+        <span class="only he common">בסוף העמוד תוכלו למנות את חומרי הדלק שתפסו את מקום העץ.</span>
+      </p>
+      <p>
+        <span class="only en simple">People built steam machines. Steam trains and steam ships went far and fast. Machines helped at home and at work. Factories made lots of clothes, food, and toys.</span>
+        <span class="only en common">Once people could build machines, they opened factories and used steam to move ships and trains. Journeys became longer and faster. Machines made hard work easier at home and at work, so factories could make large amounts of clothes, food, toys, and other goods.</span>
+        <span class="only he simple">אנשים בנו מכונות קיטור. רכבות וספינות קיטור נסעו רחוק ומהר. המכונות עזרו בבית ובעבודה. בתי חרושת הכינו הרבה בגדים, אוכל וצעצועים.</span>
+        <span class="only he common">כשבני האדם כבר ידעו לבנות מכונות, קמו בתי חרושת, וקיטור הניע ספינות ורכבות. הנסיעה נעשתה רחוקה יותר ומהירה יותר. בבית ובמלאכה המכונות חסכו עבודה קשה, ואפשר היה להכין בגדים, מזון וצעצועים בכמויות גדולות.</span>
+      </p>
+      <figure>
+        <img src="../images/steam-ship.jpg" alt="A paddle steamship with two smoking chimneys." data-i18n-alt="shipAlt">
+        <figcaption>
+          <span class="only en simple">A steam ship burns fuel so it can travel.</span>
+          <span class="only en common">A steamship burns fuel to cross the water.</span>
+          <span class="only he simple">ספינת קיטור שורפת דלק כדי לשוט.</span>
+          <span class="only he common">ספינת קיטור שורפת דלק כדי לחצות את המים.</span>
+        </figcaption>
+      </figure>
+      <p>
+        <span class="only en simple">The machines needed a huge amount of fuel. Wood and charcoal were not enough for so many machines. There was not enough wood.</span>
+        <span class="only en common">Each of those machines burned a great deal of fuel. Wood and charcoal, the fuels of that time, could not feed thousands of machines. Wood, which had been the main fuel, ran short.</span>
+        <span class="only he simple">המכונות היו צריכות המון דלק. עץ ופחם-עץ לא הספיקו לכל כך הרבה מכונות. חסר עץ.</span>
+        <span class="only he common">אבל כל מכונה כזאת בלעה דלק רב. עץ ופחם-עץ, הדלקים של הימים ההם, לא יכלו להזין אלפי מכונות. העץ, שהיה הדלק העיקרי, אזל.</span>
+      </p>
+      <p>
+        <span class="only en simple">People began to use other fuels: coal, kerosene, and gas. Today wood is not the main fuel.</span>
+        <span class="only en common">So people turned to other fuels: coal, kerosene, and cooking gas. Today wood is no longer the main fuel.</span>
+        <span class="only he simple">אנשים התחילו להשתמש גם בפחם, בנפט ובגז. היום העץ אינו הדלק העיקרי.</span>
+        <span class="only he common">לכן עברו לחומרי דלק אחרים: פחם, קרוסין (נפט) וגז בישול. בימינו העץ כבר אינו הדלק העיקרי.</span>
+      </p>
+      <figure>
+        <img src="../images/steam-station.jpg" alt="Steam trains stand in a busy station." data-i18n-alt="stationAlt">
+        <figcaption>
+          <span class="only en simple">Steam trains wait at a station.</span>
+          <span class="only en common">Steam locomotives stand in a crowded station.</span>
+          <span class="only he simple">רכבות קיטור עומדות בתחנה.</span>
+          <span class="only he common">קטרי קיטור עומדים בתחנה מלאה באנשים.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

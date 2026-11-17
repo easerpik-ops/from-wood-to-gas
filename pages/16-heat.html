@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Which fuel gives more heat?</span>
+        <span class="only en common">Heat from equal amounts</span>
+        <span class="only he simple">איזה דלק נותן יותר חום</span>
+        <span class="only he common">החום מכמות שווה של דלק</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say which fuel gives the most heat.</span>
+        <span class="only en common">By the end of this page, say which fuel gives off the most heat from the same amount.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר איזה דלק נותן הכי הרבה חום.</span>
+        <span class="only he common">בסוף העמוד תוכלו לומר איזה דלק פולט הכי הרבה חום מאותה כמות.</span>
+      </p>
+      <p>
+        <span class="only en simple">How are coal, kerosene, and cooking gas better than the old fuels, wood and charcoal? Look at the bars. They show the heat from burning the same amount, one kilogram, of each fuel.</span>
+        <span class="only en common">In what way are coal, kerosene, and cooking gas better than the fuels used in the past, wood and charcoal? Look at the bar chart. It shows how much heat comes from burning an equal amount, one kilogram, of different fuels.</span>
+        <span class="only he simple">במה פחם, קרוסין וגז בישול טובים יותר מהדלקים הישנים, עץ ופחם-עץ? הסתכלו בעמודות. הן מראות כמה חום יוצא משריפת כמות שווה, קילוגרם אחד, מכל דלק.</span>
+        <span class="only he common">במה טובים יותר פחם, קרוסין וגז בישול מחומרי הדלק ששימשו בעבר, עץ ופחם-עץ? התבוננו בתרשים העמודות. הוא מראה כמה חום מתקבל משריפת כמות שווה, קילוגרם אחד, של דלקים שונים.</span>
+      </p>
+      <figure>
+        <div class="heat">
+          <div class="heat-plot">
+            <div class="heat-bar heat-wood"></div>
+            <div class="heat-bar heat-char"></div>
+            <div class="heat-bar heat-coal"></div>
+            <div class="heat-bar heat-kero"></div>
+            <div class="heat-bar heat-gas"></div>
+          </div>
+          <div class="heat-names">
+            <div>
+              <span class="only en simple">Wood</span>
+              <span class="only en common">Wood</span>
+              <span class="only he simple">עץ</span>
+              <span class="only he common">עץ</span>
+              <span class="kg"><span class="only en simple">1 kg</span><span class="only en common">1 kg</span><span class="only he simple">1 ק״ג</span><span class="only he common">1 ק״ג</span></span>
+            </div>
+            <div>
+              <span class="only en simple">Charcoal</span>
+              <span class="only en common">Charcoal</span>
+              <span class="only he simple">פחם-עץ</span>
+              <span class="only he common">פחם-עץ</span>
+              <span class="kg"><span class="only en simple">1 kg</span><span class="only en common">1 kg</span><span class="only he simple">1 ק״ג</span><span class="only he common">1 ק״ג</span></span>
+            </div>
+            <div>
+              <span class="only en simple">Coal</span>
+              <span class="only en common">Coal</span>
+              <span class="only he simple">פחם</span>
+              <span class="only he common">פחם</span>
+              <span class="kg"><span class="only en simple">1 kg</span><span class="only en common">1 kg</span><span class="only he simple">1 ק״ג</span><span class="only he common">1 ק״ג</span></span>
+            </div>
+            <div>
+              <span class="only en simple">Kerosene</span>
+              <span class="only en common">Kerosene</span>
+              <span class="only he simple">קרוסין</span>
+              <span class="only he common">קרוסין</span>
+              <span class="kg"><span class="only en simple">1 kg</span><span class="only en common">1 kg</span><span class="only he simple">1 ק״ג</span><span class="only he common">1 ק״ג</span></span>
+            </div>
+            <div>
+              <span class="only en simple">Cooking gas</span>
+              <span class="only en common">Cooking gas</span>
+              <span class="only he simple">גז בישול</span>
+              <span class="only he common">גז בישול</span>
+              <span class="kg"><span class="only en simple">1 kg</span><span class="only en common">1 kg</span><span class="only he simple">1 ק״ג</span><span class="only he common">1 ק״ג</span></span>
+            </div>
+          </div>
+        </div>
+        <figcaption>
+          <span class="only en simple">Heat from burning one kilogram of each fuel.</span>
+          <span class="only en common">The heat given by burning one kilogram of each fuel.</span>
+          <span class="only he simple">החום משריפת קילוגרם אחד מכל דלק.</span>
+          <span class="only he common">החום המתקבל משריפת קילוגרם אחד של כל חומר דלק.</span>
+        </figcaption>
+      </figure>
+      <div class="task">
+        <h3>
+          <span class="only en simple">Look and answer</span>
+          <span class="only en common">Look and answer</span>
+          <span class="only he simple">הסתכלו וענו</span>
+          <span class="only he common">התבוננו וענו</span>
+        </h3>
+        <p>
+          <span class="only en simple">1. Which fuel in the chart gives off the most heat when it burns?</span>
+          <span class="only en common">1. Which of the fuels in the chart gives off the most heat while it burns?</span>
+          <span class="only he simple">1. איזה דלק בתרשים נותן הכי הרבה חום כשהוא נשרף?</span>
+          <span class="only he common">1. איזה מחומרי הדלק בתרשים פולט בזמן השריפה הכי הרבה חום?</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write which fuel gives the most heat.</span>
+          <span class="sr only en common">Write which fuel gives the most heat.</span>
+          <span class="sr only he simple">כתבו איזה דלק נותן הכי הרבה חום.</span>
+          <span class="sr only he common">כתבו איזה דלק פולט הכי הרבה חום.</span>
+          <input id="heat-most" class="note" type="text" data-note="heat-most">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="heat-most" data-i18n="send">Send</button>
+        </div>
+        <p>
+          <span class="only en simple">2. Which fuel in the chart gives off the least heat?</span>
+          <span class="only en common">2. Which of the fuels in the chart gives off the least heat?</span>
+          <span class="only he simple">2. איזה דלק בתרשים נותן הכי מעט חום?</span>
+          <span class="only he common">2. איזה מחומרי הדלק בתרשים פולט הכי מעט חום?</span>
+        </p>
+        <label class="answer-line">
+          <span class="sr only en simple">Write which fuel gives the least heat.</span>
+          <span class="sr only en common">Write which fuel gives the least heat.</span>
+          <span class="sr only he simple">כתבו איזה דלק נותן הכי מעט חום.</span>
+          <span class="sr only he common">כתבו איזה דלק פולט הכי מעט חום.</span>
+          <input id="heat-least" class="note" type="text" data-note="heat-least">
+        </label>
+        <div class="send-row">
+          <button type="button" class="send" data-clear="heat-least" data-i18n="send">Send</button>
+        </div>
+      </div>
+      <p>
+        <span class="only en simple">The bars show that burning one kilogram of wood gives much less heat than burning one kilogram of kerosene or one kilogram of cooking gas.</span>
+        <span class="only en common">From the bar chart one can see that burning one kilogram of wood supplies much less heat than burning one kilogram of kerosene or one kilogram of cooking gas.</span>
+        <span class="only he simple">מהעמודות רואים ששריפת קילוגרם אחד של עץ נותנת הרבה פחות חום משריפת קילוגרם אחד של קרוסין או של גז בישול.</span>
+        <span class="only he common">מהתרשים אפשר לראות ששריפת קילוגרם אחד של עץ מספקת הרבה פחות חום משריפת קילוגרם אחד של קרוסין או קילוגרם אחד של גז בישול.</span>
+      </p>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

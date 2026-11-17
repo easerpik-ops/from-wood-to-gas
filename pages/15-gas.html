@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">Cooking gas</span>
+        <span class="only en common">Where cooking gas comes from</span>
+        <span class="only he simple">גז בישול</span>
+        <span class="only he common">מאין בא גז הבישול</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say where cooking gas comes from and why it burns clean.</span>
+        <span class="only en common">By the end of this page, explain where cooking gas comes from and why it is a clean fuel.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר מאין בא גז הבישול ולמה הוא נשרף נקי.</span>
+        <span class="only he common">בסוף העמוד תוכלו להסביר מאין בא גז הבישול ומדוע הוא דלק נקי.</span>
+      </p>
+      <p>
+        <span class="only en simple">Cooking gas is an important fuel. We know it from cooking and from heating. Some of it is found in nature, trapped under the ground, in many places in the world. It can push out through cracks in the rock, and sometimes it catches fire. People call those places burning springs. Long ago they frightened people, who thought evil gods and demons lived there.</span>
+        <span class="only en common">Cooking gas is an important fuel in our time, and we know it from cooking and from heating. In nature it lies trapped in the earth, in different places around the world. Natural gas can burst out through cracks in the rocks, and sometimes it catches fire. Those places are called burning springs. They frightened people long ago, who believed they were evil gods and demons.</span>
+        <span class="only he simple">גז בישול הוא דלק חשוב. מכירים אותו מבישול ומחימום. חלק ממנו נמצא בטבע, כלוא באדמה, במקומות שונים בעולם. הוא יכול לפרוץ מסדקים בסלע, ולפעמים הוא נדלק. למקומות האלה קוראים מעיינות בוערים. פעם הם הפחידו אנשים, שחשבו שגרים שם אלים רעים ושדים.</span>
+        <span class="only he common">גז הבישול הוא דלק חשוב בימינו, ומכירים אותו מן הבישול ומן החימום. בטבע הוא כלוא באדמה, במקומות שונים בעולם. גז טבעי יכול לפרוץ מסדקים בסלעים, ולעיתים הוא מתלקח. למקומות האלה קוראים מעיינות בוערים. הם הפחידו מאוד את האנשים בימים קדומים, שחשבו שאלה אלים רעים ושדים.</span>
+      </p>
+      <p>
+        <span class="only en simple">For many years people hardly used this natural gas. They began to use it, mainly for light, only after they learned to keep it in containers and send it through pipes. In Israel, natural gas is found near the city of Arad, in the Negev.</span>
+        <span class="only en common">For a long time people did not see how important natural gas was, and they barely used it. They began to use it, mainly for lighting, only after they found a way to put it into containers or into pipes. In Israel, natural gas is found near the city of Arad in the Negev.</span>
+        <span class="only he simple">שנים רבות כמעט לא השתמשו בגז הטבעי. התחילו להשתמש בו, בעיקר לאור, רק אחרי שלמדו לשמור אותו בכלים ולהעביר אותו בצינורות. בישראל יש גז טבעי ליד העיר ערד שבנגב.</span>
+        <span class="only he common">שנים רבות לא הבינו כמה הגז הטבעי חשוב, וכמעט לא השתמשו בו. התחילו להשתמש בו, בעיקר לתאורה, רק אחרי שמצאו דרך להכניס אותו לכלים או לצינורות. בישראל מצוי גז טבעי ליד העיר ערד בנגב.</span>
+      </p>
+      <p>
+        <span class="only en simple">There is also cooking gas that people make. About two hundred years ago, William Murdoch, an engineer from Scotland, found that gas for burning can be made from coal. Today it is made from coal and from oil. It behaves much like natural gas.</span>
+        <span class="only en common">Beside the gas from nature, there is cooking gas that does not come from the ground as it is. About two hundred years ago William Murdoch, an engineer from Scotland, discovered that burning gas can be produced from coal. Today it is produced from coal and also from oil, and its properties are much like those of natural gas.</span>
+        <span class="only he simple">יש גם גז בישול שבני אדם מכינים. לפני כמאתיים שנה מצא ויליאם מרדוק, מהנדס מסקוטלנד, שאפשר להכין גז מפחם. היום מכינים אותו מפחם וגם מנפט. הוא דומה לגז הטבעי.</span>
+        <span class="only he common">לצד הגז מן הטבע יש גם גז בישול שאינו נמצא באדמה כמו שהוא. לפני כמאתיים שנה גילה ויליאם מרדוק, מהנדס מסקוטלנד, שאפשר להפיק גז מפחם. היום מפיקים אותו מפחם וגם מנפט, ותכונותיו דומות לתכונות הגז הטבעי.</span>
+      </p>
+      <p>
+        <span class="only en simple">Today most light comes from electricity, not from gas. We use gas mainly for cooking and for heat. It gives a lot of heat, and it is a clean fuel. It burns with no smoke and no soot, and it leaves no ash. Cars are not built to run on cooking gas, so it is not used for travel.</span>
+        <span class="only en common">Today most lighting runs on electricity rather than on gas. Gas serves us mainly for cooking and for heating. Cooking gas gives a great deal of heat as it burns, and it is a clean fuel: no smoke, no soot, and no ash left behind. It is not used for transport, because cars today are not built to run on gas.</span>
+        <span class="only he simple">היום רוב האור בא מחשמל, לא מגז. משתמשים בגז בעיקר לבישול ולחימום. הוא נותן הרבה חום, והוא דלק נקי. הוא נשרף בלי עשן ובלי פיח, ולא משאיר אפר. מכוניות לא בנויות לנסוע על גז בישול, ולכן לא משתמשים בו לנסיעה.</span>
+        <span class="only he common">היום רוב התאורה פועלת בחשמל ולא בגז. הגז משמש אותנו בעיקר לבישול ולחימום. גז הבישול נותן חום רב בשעת הבערה, והוא דלק נקי: הוא נשרף בלי עשן ובלי פיח, ואינו מותיר אפר. אין משתמשים בו לתחבורה, כי המכוניות של היום אינן בנויות לנסיעה בגז.</span>
+      </p>
+      <figure>
+        <img src="../images/gas-stove.jpg" alt="A blue gas flame burns under a cooking pot, with a metal pipe on the wall and no smoke." data-i18n-alt="gasAlt">
+        <figcaption>
+          <span class="only en simple">A clean blue flame cooks food. There is no smoke.</span>
+          <span class="only en common">Cooking gas burns with a blue flame and leaves no smoke or soot.</span>
+          <span class="only he simple">להבה כחולה ונקייה מבשלת. אין עשן.</span>
+          <span class="only he common">גז הבישול בוער בלהבה כחולה, בלי עשן ובלי פיח.</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>

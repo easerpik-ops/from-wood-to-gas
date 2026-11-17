@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="booting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Wood to Gas</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../book.css">
+  <script>
+    try {
+      var saved = null;
+      var q = new URLSearchParams(location.search);
+      if (q.get("preview") === "1") {
+        saved = { lang: q.get("lang"), level: q.get("level"), size: q.get("size"), space: q.get("space"), contrast: q.get("contrast") };
+      } else {
+        saved = JSON.parse(localStorage.getItem("woodToGas.a11y") || "null");
+      }
+      if (saved) {
+        var lang = saved.lang === "he" ? "he" : "en";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+        document.documentElement.dataset.size = saved.size === "sm" || saved.size === "lg" ? saved.size : "md";
+        document.documentElement.dataset.level = saved.level === "common" ? "common" : "simple";
+        document.documentElement.dataset.space = saved.space === "tight" || saved.space === "roomy" ? saved.space : "normal";
+        document.documentElement.dataset.contrast = saved.contrast === "high" ? "high" : "paper";
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <main class="book">
+    <section class="sheet story">
+      <h2>
+        <span class="only en simple">The story of coal</span>
+        <span class="only en common">The story of coal</span>
+        <span class="only he simple">סיפור הפחם</span>
+        <span class="only he common">סיפור הפחם</span>
+      </h2>
+
+      <p class="goal">
+        <span class="only en simple">By the end of this page, say how coal was made.</span>
+        <span class="only en common">By the end of this page, explain how coal formed under the ground.</span>
+        <span class="only he simple">בסוף העמוד תוכלו לומר איך נוצר הפחם.</span>
+        <span class="only he common">בסוף העמוד תוכלו להסביר כיצד נוצר הפחם מתחת לאדמה.</span>
+      </p>
+      <p>
+        <span class="only en simple">Coal is sometimes on top of the ground, but most coal is in layers deep under the ground. How was coal made?</span>
+        <span class="only en common">Coal is sometimes found on the surface of the earth, but it is usually found in layers deep underground. How did coal form?</span>
+        <span class="only he simple">לפעמים הפחם נמצא על פני האדמה, אבל בדרך כלל הוא בשכבות עמוק באדמה. איך נוצר הפחם?</span>
+        <span class="only he common">הפחם נמצא לפעמים ממש על פני האדמה, אבל לרוב הוא שוכב בשכבות עמוקות. איך הוא נוצר?</span>
+      </p>
+      <div class="comics">
+        <figure>
+          <img src="../images/coal-1.jpg" alt="Giant trees and ferns stand in a swamp." data-i18n-alt="s1Alt">
+          <figcaption>
+            <span class="only en simple">1. A very, very long time ago, giant forests covered the earth.</span>
+            <span class="only en common">1. Once, a very long time ago, the earth was covered with enormous forests and swamps.</span>
+            <span class="only he simple">1. לפני המון המון שנים כיסו יערות ענקיים את הארץ.</span>
+            <span class="only he common">1. פעם, לפני המון שנים, היה כדור הארץ מכוסה ביערות ענק ובביצות.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/coal-2.jpg" alt="Fallen trees lie in swamp water." data-i18n-alt="s2Alt">
+          <figcaption>
+            <span class="only en simple">2. The trees died and sank into the swamps.</span>
+            <span class="only en common">2. When the trees died, they fell and sank into the swamp water.</span>
+            <span class="only he simple">2. העצים מתו ושקעו בביצות.</span>
+            <span class="only he common">2. כשמתו עצי היער, הם נפלו ושקעו במי הביצה.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/coal-3.jpg" alt="Sand and mud cover a dark layer of plants." data-i18n-alt="s3Alt">
+          <figcaption>
+            <span class="only en simple">3. Sand and mud covered the dead trees. More layers piled on top.</span>
+            <span class="only en common">3. Layers of sand and mud buried the plants, and the pile grew heavier and heavier.</span>
+            <span class="only he simple">3. חול ובוץ כיסו את העצים המתים. עוד ועוד שכבות נערמו.</span>
+            <span class="only he common">3. שכבות של חול ובוץ קברו את הצמחים, והערימה נעשתה כבדה יותר ויותר.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/coal-4.jpg" alt="A black layer of coal lies between layers of rock." data-i18n-alt="s4Alt">
+          <figcaption>
+            <span class="only en simple">4. After millions of years, the buried plants turned into coal.</span>
+            <span class="only en common">4. Over millions of years, with no air and under great weight, the plants turned into coal.</span>
+            <span class="only he simple">4. אחרי מיליוני שנים הפכו הצמחים הקבורים לפחם.</span>
+            <span class="only he common">4. במשך מיליוני שנים, בלי אוויר ותחת כובד רב, הפכו הצמחים לפחם.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/coal-5.jpg" alt="A miner with a lamp stands in a wooden tunnel of coal." data-i18n-alt="s5Alt">
+          <figcaption>
+            <span class="only en simple">5. The coal stayed in black layers deep under the ground. Miners dug down to it.</span>
+            <span class="only en common">5. The coal remained in black layers deep underground, so miners dug shafts down to reach it.</span>
+            <span class="only he simple">5. הפחם נשאר בשכבות שחורות עמוק באדמה. כורים חפרו אליו.</span>
+            <span class="only he common">5. הפחם נשאר בשכבות שחורות עמוק מתחת לאדמה, והכורים חפרו פירים כדי להגיע אליו.</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="../images/coal-6.jpg" alt="Carts of coal leave a mine on a green hill." data-i18n-alt="s6Alt">
+          <figcaption>
+            <span class="only en simple">6. Today mines bring the coal up, and people use a lot of it.</span>
+            <span class="only en common">6. Today the mines bring up the coal, and people use it in very large amounts.</span>
+            <span class="only he simple">6. היום המכרות מעלים את הפחם, ואנשים משתמשים בהרבה ממנו.</span>
+            <span class="only he common">6. היום מעלים את הפחם מן המכרות, ובני האדם משתמשים בו בכמויות גדולות.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <script src="../book.js"></script>
+  <script>document.documentElement.classList.remove("booting");</script>
+</body>
+</html>
