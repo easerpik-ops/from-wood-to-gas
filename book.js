@@ -508,7 +508,9 @@
     link.className = "page-back";
     link.href = location.pathname.indexOf("/pages/") === -1 ? "index.html" : "../index.html";
     link.innerHTML = '<span class="arrow" aria-hidden="true"></span><span data-i18n="back">Back to cover</span>';
-    document.body.appendChild(link);
+    var dock = document.querySelector(".top-dock");
+    if (dock) dock.insertBefore(link, dock.firstChild);
+    else document.body.appendChild(link);
     link.addEventListener("click", function (event) {
       startTurn(event, link, "prev");
     });
@@ -924,6 +926,9 @@
   tools.appendChild(listen);
   tools.appendChild(contentsButton);
   tools.appendChild(contentsNav);
+  var dock = document.createElement("div");
+  dock.className = "top-dock";
+  dock.appendChild(tools);
 
   var dialog = document.createElement("dialog");
   dialog.id = "access-dialog";
@@ -959,7 +964,7 @@
     "<label class=\"choice\"><input type=\"radio\" name=\"contrast\" value=\"high\"><span data-i18n=\"contrastHigh\">Higher contrast</span></label>",
     "</div></fieldset>"
   ].join("");
-  document.body.appendChild(tools);
+  document.body.insertBefore(dock, document.body.firstChild);
   document.body.appendChild(dialog);
 
   opener.addEventListener("click", function () {
